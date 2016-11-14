@@ -1,0 +1,14 @@
+# robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: https://ninely.github.io/sitemap.xml
+Sitemap: https://ninely.github.io/baidusitemap.xml

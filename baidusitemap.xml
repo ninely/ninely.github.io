@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/post/uncategorized/2016-11-14-next.html</loc>
+    <lastmod>2016-11-14T03:46:41.476Z</lastmod>
+    <data>
+        <display>
+        <title>next</title>
+        <pubTime>2016-11-14T03:46:41.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/post/programming/2016-11-13-test.html</loc>
+    <lastmod>2016-11-13T12:40:10.072Z</lastmod>
+    <data>
+        <display>
+        <title>test</title>
+        <pubTime>2016-11-13T12:39:45.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="programming" url="http://yoursite.com/categories/programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/post/other/2016-11-13-hello-world.html</loc>
+    <lastmod>2016-11-13T12:24:14.015Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-11-13T10:12:04.747Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>

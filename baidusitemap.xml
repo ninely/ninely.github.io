@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>http://yoursite.com/post/uncategorized/2016-11-14-next.html</loc>
+    <loc>https://ninely.github.io/post/uncategorized/2016-11-14-next.html</loc>
     <lastmod>2016-11-14T03:46:41.476Z</lastmod>
     <data>
         <display>
@@ -19,7 +19,7 @@
 
     
   <url>
-    <loc>http://yoursite.com/post/programming/2016-11-13-test.html</loc>
+    <loc>https://ninely.github.io/post/programming/2016-11-13-test.html</loc>
     <lastmod>2016-11-13T12:40:10.072Z</lastmod>
     <data>
         <display>
@@ -29,7 +29,7 @@
          
            
              
-              <breadCrumb title="programming" url="http://yoursite.com/categories/programming/"/>
+              <breadCrumb title="programming" url="https://ninely.github.io/categories/programming/"/>
           
         </display>
     </data>
@@ -37,7 +37,7 @@
 
     
   <url>
-    <loc>http://yoursite.com/post/other/2016-11-13-hello-world.html</loc>
+    <loc>https://ninely.github.io/post/other/2016-11-13-hello-world.html</loc>
     <lastmod>2016-11-13T12:24:14.015Z</lastmod>
     <data>
         <display>
@@ -47,7 +47,7 @@
          
            
              
-              <breadCrumb title="other" url="http://yoursite.com/categories/other/"/>
+              <breadCrumb title="other" url="https://ninely.github.io/categories/other/"/>
           
         </display>
     </data>

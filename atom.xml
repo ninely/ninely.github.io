@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Ninely的小屋</title>
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://ninely.github.io/"/>
   <updated>2016-11-14T03:46:41.476Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://ninely.github.io/</id>
   
   <author>
     <name>Ninely</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>next</title>
-    <link href="http://yoursite.com/post/uncategorized/2016-11-14-next.html"/>
-    <id>http://yoursite.com/post/uncategorized/2016-11-14-next.html</id>
+    <link href="https://ninely.github.io/post/uncategorized/2016-11-14-next.html"/>
+    <id>https://ninely.github.io/post/uncategorized/2016-11-14-next.html</id>
     <published>2016-11-14T03:46:41.000Z</published>
     <updated>2016-11-14T03:46:41.476Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>test</title>
-    <link href="http://yoursite.com/post/programming/2016-11-13-test.html"/>
-    <id>http://yoursite.com/post/programming/2016-11-13-test.html</id>
+    <link href="https://ninely.github.io/post/programming/2016-11-13-test.html"/>
+    <id>https://ninely.github.io/post/programming/2016-11-13-test.html</id>
     <published>2016-11-13T12:39:45.000Z</published>
     <updated>2016-11-13T12:40:10.072Z</updated>
     
@@ -40,15 +40,15 @@
     
     </summary>
     
-      <category term="programming" scheme="http://yoursite.com/categories/programming/"/>
+      <category term="programming" scheme="https://ninely.github.io/categories/programming/"/>
     
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/post/other/2016-11-13-hello-world.html"/>
-    <id>http://yoursite.com/post/other/2016-11-13-hello-world.html</id>
+    <link href="https://ninely.github.io/post/other/2016-11-13-hello-world.html"/>
+    <id>https://ninely.github.io/post/other/2016-11-13-hello-world.html</id>
     <published>2016-11-13T10:12:04.747Z</published>
     <updated>2016-11-13T12:24:14.015Z</updated>
     
@@ -69,7 +69,7 @@
     
     </summary>
     
-      <category term="other" scheme="http://yoursite.com/categories/other/"/>
+      <category term="other" scheme="https://ninely.github.io/categories/other/"/>
     
     
   </entry>

@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://ninely.github.io/post/other/2016-11-13-hello-world.html</loc>
+    <lastmod>2016-11-15T01:26:53.535Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-11-13T10:12:04.747Z</pubTime>
+        
+        <tag>other</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="https://ninely.github.io/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://ninely.github.io/post/other/2016-11-14-next.html</loc>
     <lastmod>2016-11-14T03:46:41.476Z</lastmod>
     <data>
@@ -30,24 +50,6 @@
            
              
               <breadCrumb title="programming" url="https://ninely.github.io/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://ninely.github.io/post/other/2016-11-13-hello-world.html</loc>
-    <lastmod>2016-11-13T12:24:14.015Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-11-13T10:12:04.747Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="other" url="https://ninely.github.io/categories/other/"/>
           
         </display>
     </data>

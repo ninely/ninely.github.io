@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ninely.github.io/post/other/2016-11-13-hello-world.html</loc>
+    
+    <lastmod>2016-11-15T01:26:53.535Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ninely.github.io/post/other/2016-11-14-next.html</loc>
     
     <lastmod>2016-11-14T03:46:41.476Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://ninely.github.io/post/programming/2016-11-13-test.html</loc>
     
     <lastmod>2016-11-13T12:40:10.072Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ninely.github.io/post/other/2016-11-13-hello-world.html</loc>
-    
-    <lastmod>2016-11-13T12:24:14.015Z</lastmod>
     
   </url>
   

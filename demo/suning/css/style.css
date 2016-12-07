@@ -1,0 +1,54 @@
+/*
+* @Author: Ly
+* @Date:   2016-11-25 20:06:35
+* @Last Modified by:   Ly
+* @Last Modified time: 2016-12-02 12:27:30
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: #333;
+	font: 12px/1.5 arial, tahoma, 宋体;
+}
+em, i {
+	font-style: normal;
+}
+img{
+	border: none;
+}
+a {
+	text-decoration: none;
+	color: #666;
+}
+a:hover , a:hover span{
+	color: #f60;
+	text-decoration: underline;
+}
+ul {
+	list-style: none;
+}
+@font-face {
+	font-family: 'ng-iconfont';
+	src: url('../font/iconfont.eot'); /* IE9 Compat Modes */
+	src: url('../font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../font/iconfont.woff') format('woff'), /* Modern Browsers */
+	     url('../font/iconfont.ttf') format('truetype'), /* Safari, Android, ios */
+	     url('../font/iconfont.svg#uxiconfont') format('svg'); /* Legacy ios */
+}
+.ng-iconfont{
+	font-family: "ng-iconfont" !important;
+	font-style: normal;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ".";
+	clear: both;
+	height: 0;
+}
+.clearfix { display: inline-block; zoom: 1; }
+/** html .clearfix { height: 1%; }*/
+.clearfix { display: block; }

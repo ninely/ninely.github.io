@@ -1,0 +1,255 @@
+/*
+* @Author: Ly
+* @Date:   2016-12-03 12:12:13
+* @Last Modified by:   Ly
+* @Last Modified time: 2016-12-03 19:24:23
+*/
+
+/*页尾*/
+.ng-footer {
+	margin-top: 10px;
+	font-family: "Microsoft Yahei";
+}
+.ng-footer .ng-ser-box {
+    width: 100%;
+    background: #f5f5f5;
+    border-top: 1px solid #e7e7e7;
+    min-width: 1190px;
+    margin: 0 auto;
+}
+.ng-footer .ng-ser-box-con {
+    width: 1190px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ng-footer .ng-promise {
+    /*width: 1190px;*/
+    width: 1250px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.ng-footer .ng-promise dl {
+    width: 250px;
+    float: left;
+    overflow: hidden;
+    font-family: "Microsoft Yahei";
+}
+.ng-footer .ng-promise dt {
+    float: left;
+    width: 48px;
+    height: 48px;
+    background: url('../img/s_pic1.png') no-repeat;
+    text-indent: -999em;
+    overflow: hidden;
+    margin-right: 8px;
+}
+.ng-footer .ng-promise dd {
+    float: left;
+    height: 48px;
+    width: 180px;
+}
+.ng-footer .ng-promise dd p {
+    line-height: 24px;
+    width: 100%;
+    color: #545454;
+}
+.ng-footer .ng-promise dd p strong {
+    font-weight: 700;
+    color: #222;
+    font-size: 14px;
+}
+.ng-footer .ng-promise dd p a {
+    color: #333;
+}
+.ng-footer .ng-promise dt.zheng {
+    background-position: 0 0;
+}
+.ng-footer .ng-promise dt.jisu {
+    background-position: -48px 0;
+}
+.ng-footer .ng-promise dt.wuyou {
+    background-position: -96px 0;
+}
+.ng-footer .ng-promise dt.te {
+    background-position: -144px 0;
+}
+.ng-footer .ng-promise dt.help {
+    background-position: -191px 0;
+}
+
+.ng-footer .ng-help-box {
+    float: left;
+    width: 1050px;
+    height: 180px;
+}
+.ng-footer .ng-help-box dl {
+    width: 210px;
+    float: left;
+    height: 160px;
+    font-family: "Microsoft Yahei";
+}
+.ng-footer .ng-help-box dt {
+    width: 100%;
+    line-height: 40px;
+    font-weight: 700;
+    color: #545454;
+    height: 35px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.ng-footer .ng-help-box dd {
+    width: 100%;
+    line-height: 22px;
+    display: block;
+}
+
+.ng-footer .ng-app-down {
+    float: left;
+    height: 180px;
+    width: 90px;
+    font-family: "Microsoft Yahei";
+}
+.ng-footer .ng-app-down p {
+    width: 100%;
+    line-height: 40px;
+    font-weight: 700;
+    color: #545454;
+    height: 35px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.ng-footer .ng-new-pro {
+	min-width: 1190px;
+    background: #33302b;
+    position: relative;
+    width: 100%;
+    height: 125px;
+}
+.ng-footer .ng-new-pro-con {
+    width: 1190px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ng-footer .ng-new-pro-list {
+    width: 850px;
+    margin-left: -50px;
+    float: left;
+    height: 125px;
+    color: #eee;
+}
+.ng-footer .ng-new-pro-list dl {
+    padding: 0 50px;
+    width: 324px;
+    border-color: #444;
+    float: left;
+    height: 100px;
+    margin-top: 12px;
+    border-right: 1px dotted #8d8d8d;
+}
+
+.ng-footer .ng-new-pro-list dt {
+    float: left;
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+.ng-footer .ng-new-pro-list dd {
+    width: 224px;
+    float: left;
+    height: 100px;
+}
+.ng-footer .ng-new-pro-list dd p.ng-title a {
+	color: #eee;
+}
+.ng-footer .ng-new-pro-list dd p.ng-intro a {
+	text-decoration: none;
+	color: #eee;
+}
+.ng-footer .ng-new-pro-list dd p.ng-title {
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.ng-footer .ng-new-pro-list dd p.ng-intro {
+    line-height: 18px;
+}
+.ng-footer .ng-serch-suning {
+    float: left;
+    width: 390px;
+    height: 100px;
+    margin-top: 10px;
+}
+.ng-footer .ng-serch-suning dt {
+    float: left;
+    height: 94px;
+    width: 140px;
+    margin-top: 3px;
+    background: url('../img/s_pic1.png') 0 -50px no-repeat;
+}
+.ng-footer .ng-serch-suning dd {
+    float: left;
+    height: 100px;
+    width: 190px;
+    color: #eee;
+}
+.ng-footer .ng-serch-suning dd p.ng-title {
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.ng-footer .ng-serch-suning dd a.srh-btn {
+    display: block;
+    height: 25px;
+    width: 105px;
+    margin-top: 5px;
+    text-indent: -999em;
+    overflow: hidden;
+    background: url('../img/s_pic1.png')-140px -49px no-repeat;
+}
+.ng-footer .ng-serch-suning dd a.srh-btn:hover {
+    background-position: -140px -74px;
+}
+.ng-footer .ng-s-footer {
+	min-width: 1190px;
+    background: #33302b;
+    width: 100%;
+    padding-top: 15px;
+}
+.ng-s-footer .ng-s-f-con {
+    width: 1190px;
+    min-width: 1190px;
+    height: 130px;
+    margin: 0 auto;
+}
+.ng-s-footer p.ng-url-list {
+    line-height: 25px;
+    height: 25px;
+}
+.ng-s-footer p.ng-url-list {
+    line-height: 25px;
+}
+.ng-s-footer p.ng-url-list a {
+    color: #f9f9f9;
+}
+.ng-s-footer p.ng-url-list span {
+    color: #888;
+    padding: 0 8px;
+}
+.ng-s-footer p.ng-copyright {
+    width: 1190px;
+    float: left;
+    color: #999;
+    margin-top: 0;
+    line-height: 25px;
+    height: 25px;
+}
+.clear {
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    font-size: 0;
+}

@@ -1,0 +1,379 @@
+/*
+* @Author: Ly
+* @Date:   2016-11-25 20:06:35
+* @Last Modified by:   Ly
+* @Last Modified time: 2016-12-01 10:15:41
+*/
+
+/*搜索栏目开始*/
+.ng-header {
+	min-width: 1190px;
+	width: 100%;
+	height: 100px;
+	/*margin: 0 auto;*/
+	position: relative;
+}
+.ng-header-container {
+	position: relative;
+	width: 1190px;
+	/*height: 100px;*/
+	height: 100%;
+	margin: 0 auto;
+}
+.ng-header-box, .logo-set, .slogn{
+	float: left;
+}
+.ng-header-box .logo-set img {
+	overflow: hidden;
+	width: 190px;
+	display: block;
+}
+.ng-search {
+	height: 100px;
+	left: 370px;
+	position: absolute;
+	top: 0;
+	width: 600px;
+}
+.g-search {
+	display: inline-block;
+	float: right;
+	margin: 28px 0 0;
+	position: relative;
+	width: 600px;
+}
+.search-icon {
+	color: #ccc;
+    display: block;
+    font-size: 18px;
+    height: 34px;
+    left: 0;
+    line-height: 34px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 34px;
+    background: #fff;
+}
+.search-keyword-box {
+	border-color: #ffaa00;
+	border-style: solid none solid solid;
+	border-width: 2px medium 2px 2px;
+	/*height: 45px;*/
+	padding-left: 30px;
+	float: left;
+	position: relative;
+}
+.search-keyword {
+	width: 458px;
+	height: 18px;
+	line-height: 18px;
+	padding: 8px 10px 8px 0;
+	border: none;
+	outline:medium;
+	background: #FFF;
+	color: #BBB;
+	font-size: 14px;
+    display: inline-block;
+    text-align: start;
+    /*float: left;*/
+}
+.search-keyword::-webkit-input-placeholder {
+ 	color: #BBB;
+ 	font-size: 14px;
+}
+
+.search-btn {
+	background: #ffc001;
+	color: #333;
+	width: 100px;
+    height: 38px;
+    padding: 0 30px;
+    border: 0;
+    cursor: pointer;
+    letter-spacing: 7px;
+    font-family: 'MicroSoft YaHei';
+    font-size: 16px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    float: left;
+}
+.g-search-hotwords {
+	float: left;
+	width: 100%;
+	height: 18px;
+	margin-top: 5px;
+	overflow: hidden;
+	font-size: 0;
+}
+.g-search-hotwords a {
+	float: left;
+	margin-right: 10px;
+	white-space: nowrap;
+	font-size: 12px;
+	color: #999;
+}
+.g-search-hotwords a:hover{
+	color: #FF6600;
+}
+.index-head-active {
+	float: right;
+	margin-top: 10px;
+}
+.index-head-active a {
+	display: inline-block;
+}
+/*搜索栏目结束*/
+
+/*分类头部开始*/
+.ng-nav-bar {
+	position: relative;
+	min-width: 1190px;
+	width: 100%;
+	/*overflow: visible;*/
+    height: 38px;
+    border-bottom: 2px solid #333;
+}
+.ng-sort {
+	position: absolute;
+    width: 190px;
+    top: 0;
+    left: 50%;
+    margin-left: -595px;
+    font-family: "Microsoft Yahei";
+}
+.ng-all-hook {
+	position: relative;
+    display: block;
+    width: 178px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    background: #ffc001;
+    padding-left: 12px;
+    color: #333 !important;
+}
+.ng-all-hook:hover span{
+	color: #333;
+}
+.ng-all-hook em {
+	display: inline-block;
+	width: 14px;
+	margin-right: 10px;
+}
+.ng-all-hook span {
+	font-weight: 700;
+}
+.ng-sort-list-box {
+	position: absolute;
+    left: 0;
+    top: 38px;
+    height: 450px;
+    width: 190px;
+    z-index: 10;
+}
+.ng-sort ul.sort-list {
+    /*float: left;*/
+    /*display: inline-block;*/
+	position: relative;
+    padding: 4px 0 6px 0;
+    box-shadow: 0 1px 1px 1px #eee;
+    background: #f4f4f4;
+    /*opacity: 0.95;*/
+}
+/*.ng-sort ul.sort-list {
+	position: absolute;
+    left: 0;
+    top: 38px;
+    height: 450px;
+    width: 190px;
+    padding: 2px 0 0 0;
+    box-shadow: 0 1px 1px 1px #eee;
+    background: #f4f4f4;
+    opacity: 0.95;
+}*/
+.ng-sort ul.sort-list li {
+	/*float: left;*/
+	/*list-style: none;*/
+    width: 184px;
+    height: 34px;
+    padding-left: 6px;
+    line-height: 32px;
+    border: 0;
+    /*position: relative;*/
+}
+
+/*使用js实现*/
+/*.ng-sort ul.sort-list li:hover{
+	background: #fa4b4b;
+}*/
+/*.ng-sort ul.sort-list li:hover > a{
+	color: #fff;
+}*/
+li.sort-list-hover {
+	background: #fa4b4b;
+}
+.ng-sort ul.sort-list li.sort-list-hover > a {
+	color: #fff;
+}
+
+.ng-sort ul.sort-list li > a {
+    display: inline-block;
+    margin-left: 7px;
+    color: #333;
+    font-size: 13px;
+    white-space: nowrap;
+}
+.ng-sort ul.sort-list li > em{
+	font-size: 16px;
+	padding-right: 2px;
+	margin-left: 5px;
+	width: 16px;
+	line-height: 32px;
+	display: inline-block;
+}
+
+/*详细导航右拉菜单开始*/
+.ng-sort ul.sort-list li:hover .ng-sort-detail{
+	/*display: block;*/
+}
+.ng-sort-detail {
+	display: none;
+	width: 910px;
+    top: 1px;
+    border: 2px solid #fa4b4b;
+    position: absolute;
+    left: 190px;
+    min-height: 450px;
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+    line-height: 18px;
+    /*z-index: 18;*/
+}
+.ng-sort-detail .cate-list {
+	margin: 10px 0 0 0;
+    padding-left: 20px;
+    overflow: hidden;
+    float: left;
+	width: 690px;
+}
+.ng-sort-detail dl {
+	width: 660px;
+	float: left;
+    height: auto;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.ng-sort-detail dt {
+	background: url(../img/s_pic1.png) no-repeat scroll -270px -45px;
+	float: left;
+    width: 84px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.ng-sort-detail dd {
+	float: left;
+    width: 560px;
+    line-height: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    margin-top: 4px;
+    padding-bottom: 8px;
+    font: 12px arial,tahoma,宋体;
+}
+.ng-sort-detail dd a {
+	color: #666;
+    margin-right: 15px;
+    display: inline-block;
+    line-height: 20px;
+}
+.ng-sort-detail dd a:hover {
+	color: #f60;
+}
+.ng-sort-detail dd a.red{
+	color: #f60;
+}
+
+.ng-sort-detail .act-show {
+    position: relative;
+    /*right: 10px;*/
+    /*top: 11px;*/
+    width: 200px;
+    height: 420px;
+    overflow: hidden;
+    float: right;
+	margin: 10px 0 0 0;
+}
+.ng-sort-detail .act-show a {
+	display: inline-block;
+	position: absolute;
+	top: 2px;
+	right: 7px;
+	color: #666;
+}
+.ng-sort-detail .act-show a em {
+	font-size: 25px;
+}
+.ng-sort-detail .act-show img {
+	float: right;
+}
+.ng-sort-detail .act-show a:hover em{
+	color: #f60;
+	cursor: pointer;
+}
+/*详细导航右拉菜单结束*/
+
+.ng-nav-index {
+	width: 785px;
+	font-family: "Microsoft Yahei";
+	height: 36px;
+	line-height: 36px;
+	position: absolute;
+	top: 0;
+	/*left: 190px;*/
+	margin-left: -405px;
+	padding-left: 10px;
+	left: 50%;
+}
+ul.ng-nav li {
+	display: block;
+	float: left;
+	height: 36px;
+	padding: 0 12px 0 13px;
+	/*list-style: none;*/
+}
+ul.ng-nav li a {
+	position: relative;
+	float: left;
+	color: #333;
+	font-size: 15px;
+	line-height: 36px;
+}
+ul.ng-nav li a:hover{
+	color: #FF6600;
+}
+ul.ng-nav li a .new{
+	background: url(../img/s_pic1.png) no-repeat -16px -205px;
+	display: block;
+	height: 16px;
+	overflow: hidden;
+	position: absolute;
+	right: -18px;
+	top: 3px;
+	width: 16px;
+}
+ul.ng-nav li a .hot{
+	background: url(../img/s_pic1.png) no-repeat 0 -205px;
+	display: block;
+	height: 16px;
+	overflow: hidden;
+	position: absolute;
+	right: -18px;
+	top: 3px;
+	width: 16px;
+}
+/*分类头部结束

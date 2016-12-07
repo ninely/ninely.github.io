@@ -1,0 +1,408 @@
+/*
+* @Author: Ly
+* @Date:   2016-11-25 20:06:35
+* @Last Modified by:   Ly
+* @Last Modified time: 2016-12-02 21:33:29
+*/
+html {
+	min-width: 1190px;
+}
+
+/*头部广告开始*/
+#layout-adt {
+	background: #008CC7;
+	width: 100%;
+	height: auto;
+	/*overflow: hidden;*/
+}
+#top-adt-big {
+	width: 100%;
+	/*width: 1190px;*/
+	/*min-width: 1190px;*/
+	/*height: auto;*/
+	height: 0;
+	overflow: hidden;
+	margin: 0 auto;
+	/*1.图片间隙处理*/
+	font-size: 0;
+}
+#top-adt-big img {
+	width: 100%;
+	/*2.图片间隙处理*/
+	/*display: block;*/
+}
+#top-adt {
+	width: 1190px;
+	height: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+#top-adt a, #top-adt img {
+	display: block;
+	/*overflow: hidden;*/
+}
+#top-adt .x {
+	background: url(../img/s_pic.png) no-repeat 0 0;
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	right: -2px;
+	top: 3px;
+	/*overflow: hidden;*/
+}
+#top-adt .x:hover {
+	/*background: url(../img/s_pic.png) no-repeat -15px 0;*/
+	background-position: -15px 0;
+}
+/*头部广告结束*/
+
+/*头部全站导航开始*/
+.ng-toolbar {
+	background: #f5f5f5;
+	min-width: 1190px;
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #eee;
+}
+.ng-toolbar-container {
+	/*height: 35px;*/
+	height: 100%;
+	line-height: 35px;
+	width: 1190px;
+	/*position: relative;*/
+	margin: 0 auto;
+}
+.ng-toolbar-left {
+	float: left;
+	height: 100%;
+	/*position: relative;*/
+	/*padding: 0 9px;*/
+}
+
+.ng-bar-node-box {
+	height: 100%;
+	float: left;
+	position: relative;
+
+	/*border: 1px #f5f5f5 solid;*/
+	/*line-height: 35px;*/
+	/*box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;*/
+}
+.ng-bar-node-box .ng-bar-node span {
+	float: left;
+}
+.ng-bar-node-box .ng-bar-node em {
+	float: left;
+}
+/*换用js来实现下拉菜单*/
+/*.ng-bar-node-box:hover .ng-bar-node {
+	background: #fff;
+	border: 1px #ddd solid;
+	border-bottom: 0px #fff solid;
+}*/
+/*.ng-bar-node-box:hover .ng-down-box {
+	display: block;
+}*/
+
+.ng-bar-node {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	padding: 0 10px;
+	border: 1px #f5f5f5 solid;
+	z-index: 15;
+}
+.ng-bar-node-hover {
+	background: #fff;
+	border: 1px #ddd solid;
+	border-bottom: 0px #fff solid;
+}
+.ng-down-box {
+	display: none;
+	position: absolute;
+	border: 1px solid #dddddd;
+	/*border-top: none;*/
+	/*border-top: 1px solid #eee;*/
+	background: #fff;
+	top: 35px;
+    padding-bottom: 5px;
+	z-index: 14;
+}
+.ng-down-box > a {
+	/*display: block;*/
+	float: left;
+    padding-left: 10px;
+    width: 71px;
+}
+
+.shop-nav-child {
+    padding-top: 5px;
+	width: 162px;
+    left: 0;
+    right: auto;
+}
+.shop-nav-child a {
+	height: 28px;
+    line-height: 28px;
+}
+.myorder-child a{
+	height: 30px;
+    line-height: 30px;
+}
+.service-child {
+    padding-top: 5px;
+	width: 162px;
+    left: -81px;
+    /*right: 0;*/
+}
+.service-child a {
+	height: 28px;
+    line-height: 28px;
+}
+.mysuning-child {
+    padding-top: 5px;
+	width: 162px;
+    left: 0;
+    right: auto;
+}
+.mysuning-child > a {
+	height: 30px;
+    line-height: 30px;
+}
+.mysuning-info * {
+	float: left;
+}
+.mysuning-info {
+	/*width: 142px;*/
+	margin: 0 10px;
+}
+.heading {
+	border: 1px #f5f5f5 solid;
+}
+.heading img {
+	width: 54px;
+	height: 54px;
+}
+.mysuning-detail {
+	width: 86px;
+}
+.mysuning-detail a {
+    margin-left: 20px;
+    line-height: 28px;
+    padding: 0;
+    width: 64px;
+    word-break: break-all;
+}
+.mysuning-detail .daka {
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    background: #F60;
+    border-radius: 4px;
+}
+
+.mb-down-child {
+	width: 320px;
+	left: -64px;
+	line-height: 35px;
+}
+.mb-down-child ul {
+	overflow:hidden;
+	margin: 10px 0 0;
+	display: block;
+}
+.mb-down-child ul  * {
+	display: inline-block;
+}
+.mb-down-child ul li {
+	float: left;
+	width: 180px;
+	text-align: center;
+}
+.mb-down-child p {
+    display: block;
+    line-height: 14px;
+    overflow: hidden;
+    color: #666;
+}
+.mb-down-child .top-code-list {
+	width: 140px;
+}
+.mb-down-child .top-code-list img {
+	width: 35px;
+	height: 35px;
+	padding: 8px;
+}
+.mb-down-child div {
+	margin: 5px auto;
+}
+.mb-down-child .top-code-ad {
+	display: block;
+	margin: 0 auto;
+}
+.mb-down-child .top-code {
+	margin: 0 auto;
+	width: 147px;
+    height: 147px;
+    display: block;
+}
+.mb-down-child .line {
+	position: absolute;
+    top: 30px;
+    left: 179px;
+    width: 1px;
+    height: 97px;
+    background: #DEDEDE;
+}
+
+.ng-bar-node .new {
+	position: absolute;
+	/*float: left;*/
+	left: 53px;
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	/*top: 6px;*/
+	/*margin: 5px 0;*/
+	background: url('../img/s_pic1.png') no-repeat -16px -205px;
+}
+.ng-iconfont.down {
+	transition: transform 0.2s ease-in 0s;
+	margin-left: 3px;
+	width: 10px;
+}
+.ng-iconfont.mb {
+	line-height: 30px;
+	font-size: 16px;
+	margin-right: 2px;
+}
+.ng-bar-node-box:hover .ng-iconfont.down {
+	transform: rotate(-180deg);
+	color: #666;
+	text-decoration: none;
+}
+.ng-iconfont.cart {
+	float: left;
+	font-size: 18px;
+	margin-right: 7px;
+	width: 16px;
+	/*line-height: 30px;*/
+}
+.ng-bar-node-mini-cart {
+	padding-left: 9px;
+}
+.ng-bar-node-mini-cart span{
+	float: left;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	position: relative;
+}
+.ng-bar-node-mini-cart:hover :not(b){
+	color: #f60;
+	cursor: pointer;
+}
+.total-num-box {
+    position: relative;
+    top: 2px;
+    right: 3px;
+    height: 16px;
+    line-height: 15px;
+    /*z-index: 300;*/
+    font-size: 12px;
+    margin-left: 3px;
+}
+.total-num {
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+    height: 16px;
+    min-width: 8px;
+    padding: 0 4px;
+    text-align: center;
+    /*z-index: 10;*/
+    color: #FFF;
+    border-radius: 8px;
+    background: #f7a705;
+}
+
+.ng-toolbar-left a, .ng-toolbar-left span, .ng-toolbar-left em {
+	/*换行空格问题*/
+	/*display: inline-block;*/
+	float: left;
+}
+
+.site-nav-child {
+	left: 0px;
+	width: 990px;
+	padding: 20px 0;
+	/*height: 242px;*/
+}
+/*.ng-site-nav-box:hover .site-nav-child {
+	display: block;
+}*/
+.site-nav-child dl {
+	float: left;
+	padding-left: 20px;
+	width: 176px;
+	/*margin-top: 25px;*/
+}
+.site-nav-child dl:first-child ~dl{
+	border-left: 1px solid #eee;
+}
+.site-nav-child dt {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	width: 100%;
+}
+.site-nav-child dd {
+	overflow: hidden;
+	display: block;
+}
+.site-nav-child p {
+	overflow: hidden;
+	float: left;
+	width: 78px;
+}
+.site-nav-child a {
+	overflow: hidden;
+	height: 25px;
+}
+
+.ng-toolbar-right {
+	float: right;
+	height: 100%;
+}
+.reg-bar-node {
+	float: left;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.reg-bar-node:hover {
+	background: #eee;
+}
+.reg-bar-node .reg {
+	margin-left: 10px;
+}
+.ng-bar-node-link {
+	padding: 0 10px;
+}
+.ng-bar-node-link:hover {
+	cursor: pointer;
+}
+.touch-href:hover span {
+	text-decoration: none;
+	color: #666;
+	cursor: default;
+}
+/*.touch-href:hover em {
+	text-decoration: none;
+	color: #666;
+	cursor: default;
+}*/
+/*头部全站导航结束*/
+

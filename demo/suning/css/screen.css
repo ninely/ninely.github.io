@@ -1,0 +1,384 @@
+/*
+* @Author: Ly
+* @Date:   2016-12-01 09:41:32
+* @Last Modified by:   Ly
+* @Last Modified time: 2016-12-02 21:40:21
+*/
+/*大图轮播开始*/
+.first-screen {
+	min-width: 1190px;
+	width: 100%;
+	height: 450px;
+	position: relative;
+}
+.banner-wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.banner-wrapper .banner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.banner-wrapper .banner li {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 450px;
+}
+.banner-wrapper .banner li a {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -405px;
+	overflow: hidden;
+	height: 450px;
+	width: 750px;
+}
+.banner-wrapper .banner li img {
+	display: block;
+	/*width: 770px;*/
+	/*height: 450px;*/
+}
+.banner-wrapper .angle-btn {
+	position: absolute;
+	display: none;
+	top: 200px;
+	width: 38px;
+	height: 78px;
+	opacity: 0.6;
+}
+.banner-wrapper:hover .angle-btn{
+	display: inline-block;
+}
+.banner-wrapper a.angle-btn:hover {
+	/*color: #F60;*/
+    text-decoration: underline;
+    opacity: 1;
+}
+.banner-wrapper .prev-btn {
+	background: url("../img/indexNew-bg.png") no-repeat 0 -51px;
+	left: 50%;
+	margin-left: -395px;
+}
+.banner-wrapper .next-btn {
+	background: url("../img/indexNew-bg.png") no-repeat -43px -51px;
+	right: 50%;
+	margin-right: -335px;
+}
+.banner-wrapper .banner-nav-wrapper {
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+.banner-wrapper .banner-nav {
+	display: inline-block;
+	font-size: 0;
+	padding-right: 80px;
+	opacity: 0.8;
+}
+.banner-wrapper .banner-nav a {
+	display: inline-block;
+	line-height: 20px;
+	font-size: 12px;
+	background: #333;
+	color: #fff;
+	margin-left: 8px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+.banner-wrapper .banner-nav a.current {
+	text-decoration: none;
+	background: #ff6000;
+}
+/*js实现*/
+.banner-wrapper .banner-nav a:hover {
+	text-decoration: none;
+	/*background: #ff6000;*/
+}
+
+
+/*公告*/
+.show-case {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: 350px;
+	background: #FFF;
+	overflow: hidden;
+    /*height: 431px;*/
+    width: 218px
+}
+.show-case .infor-content {
+	position: relative;
+    /*width: 218px;*/
+    height: 420px;
+}
+.show-case ul.infor-nav {
+	margin: 0 15px;
+	border-bottom: 1px #eee solid;
+}
+.show-case ul.infor-nav li {
+	width: 80px;
+    /*height: 26px;*/
+    padding: 4px 0;
+    text-align: center;
+}
+.show-case ul.infor-nav a {
+	display: block;
+    line-height: 28px;
+	font: 14px "microsoft yahei";
+}
+.show-case .infor-list {
+}
+.show-case .infor-item {
+	margin: 10px auto 5px auto;
+	width: 179px;
+    opacity: 0.98;
+}
+.show-case .infor-item p {
+	display: block;
+    /*width: 179px;*/
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+}
+.show-case .infor-item p i {
+	margin-right: 5px;
+}
+.show-case .infor-item p.red-show a {
+	color: #ff6000;
+}
+
+.show-case .quick-title {
+	border-top: 1px solid #eee;
+	padding-left: 30px;
+	font: 14px "microsoft yahei";
+	height: 40px;
+    line-height: 40px;
+}
+.show-case .quick-title em {
+	display: block;
+}
+.show-case ul.quick-btn {
+	width: 219px;
+    border-width: 2px 0 1px 0;
+    border-color: #f2f2f2;
+    border-style: solid;
+    overflow: hidden;
+}
+.show-case ul.quick-btn li {
+	float: left;
+	width: 72px;
+    height: 60px;
+    border-width: 0 1px 1px 0;
+    border-color: #f2f2f2;
+    border-style: solid;
+}
+.show-case ul.quick-btn li:hover a{
+	text-decoration: none;
+	color: #ff6000;
+}
+.show-case ul.quick-btn li:hover em{
+	text-decoration: none;
+	color: #ff6000;
+	cursor: pointer;
+}
+.show-case ul.quick-btn a{
+	display: block;
+    text-align: center;
+    font-family: "microsoft yahei";
+    overflow: hidden;
+}
+.show-case ul.quick-btn i {
+	display: block;
+	width: 34px;
+	height: 34px;
+	line-height: 40px;
+	margin: 0 auto;
+	font-size: 26px;
+	text-align: center;
+}
+.show-case ul.quick-btn em {
+	display: block;
+	line-height: 16px;
+	width: 100%;
+}
+/*大图轮播结束*/
+
+/*特色馆开始*/
+.second-screen {
+	min-width: 1190px;
+	width: 1190px;
+	/*width: 100%;*/
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.g-feature {
+	height: 420px;
+}
+.second-screen .title {
+	color: #222;
+    height: 40px;
+    overflow: hidden;
+}
+.second-screen .title h3 {
+	float: left;
+	font: bold 20px/40px "microsoft yahei";
+}
+.second-screen .title h4 {
+	float: left;
+	font: 12px/46px arial;
+    padding-left: 6px;
+}
+.g-feature .feature-sider {
+	border: 1px solid #eee;
+	float: left;
+	height: 378px;
+	overflow: hidden;
+}
+.g-feature .feature-sider img {
+	display: block;
+}
+.g-feature .feature-enter {
+	float: left;
+	position: absolute;
+	left: 190px;
+	top: 20px;
+}
+.g-feature .feature-enter li {
+	/*display: none;*/
+}
+.g-feature .feature-enter a {
+	/*display: none;*/
+}
+.g-feature .feature-item1 img {
+	display: block;
+	height: 210px;
+    width: 420px;
+}
+.g-feature .feature-item2 img {
+	display: block;
+	height: 190px;
+    width: 400px;
+}
+.g-feature .roll {
+    background: rgba(0, 0, 0, 0) url("../img/roll.png") no-repeat scroll 0 0;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    z-index: 8;
+}
+.g-feature .feature-list {
+	float: left;
+	border: 1px solid #eee;
+	height: 378px;
+	overflow: hidden;
+	position: absolute;
+	left: 590px;
+	background-color: #fff;
+}
+.g-feature .feature-list .col3 {
+	overflow: hidden;
+	float: left;
+	width: 400px;
+}
+.g-feature .feature-list .col4 {
+	overflow: hidden;
+	float: left;
+	width: 198px;
+}
+.g-feature .col3 li {
+	float: left;
+}
+.g-feature .col3 a {
+	display: block;
+	border: 1px solid #eee;
+	width: 198px;
+}
+.g-feature .col3 img {
+	/*width: 190px;*/
+	display: block;
+}
+.g-feature .col4 li {
+	float: left;
+	/*width: 190px;*/
+}
+.g-feature .col4 li:first-child ~li {
+	border-top: 1px solid #eee;
+}
+.g-feature .col4 img {
+	/*width: 190px;*/
+	display: block;
+}
+.g-feature img:hover {
+	opacity: 0.8;
+}
+/*特色馆结束*/
+
+/*苏宁金融开始*/
+.g-financial {
+	height: 280px;
+}
+.g-financial .financial-sider {
+	float: left;
+	height: 240px;
+	overflow: hidden;
+	width: 190px;
+}
+.g-financial .financial-enter {
+	float: left;
+	width: 400px;
+	height: 240px;
+	overflow: hidden;
+}
+.g-financial ul {
+	float: left;
+	height: 230px;
+	overflow: hidden;
+	padding-top: 10px;
+	background-color: #f8f8f8
+}
+.g-financial ul li {
+	float: left;
+	/*display: inline-block;*/
+	border: 1px solid #eee;
+	overflow: hidden;
+}
+.g-financial .col3 {
+	width: 410px;
+}
+.g-financial .col3 li {
+	margin-left: 10px
+}
+.g-financial .col3 img {
+	height: 220px;
+    width: 190px;
+    display: block;
+}
+.g-financial .col4 {
+	width: 189px;
+	/*margin-right: 10px;*/
+}
+.g-financial .col4 li {
+	margin-bottom: 8px
+}
+.g-financial .col4 img {
+	display: block;
+	height: 105px;
+	width: 180px;
+}
+.g-financial img:hover {
+	opacity: 0.8;
+}
+/*苏宁金融结束*/

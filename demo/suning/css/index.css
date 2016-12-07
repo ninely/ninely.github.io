@@ -1,0 +1,429 @@
+/*
+* @Author: Ly
+* @Date:   2016-12-02 11:04:53
+* @Last Modified by:   Ly
+* @Last Modified time: 2016-12-03 10:13:53
+*/
+
+/*1楼开始*/
+.g-floor {
+	min-width: 1190px;
+	width: 1190px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	margin-top: 30px;
+}
+.floor-head {
+	position: relative;
+	height: 34px;
+}
+.floor-head .title {
+	position: relative;
+    float: left;
+    bottom: 6px;
+    width: 190px;
+    height: 34px;
+    color: #222;
+    overflow: hidden;
+}
+.floor-head .title h3 {
+	height: 34px;
+    font: bold 20px/34px 'microsoft yahei';
+    overflow: hidden;
+}
+.floor-head .title h3 b {
+    padding-right: 8px;
+    font-family: arial;
+}
+.floor-head .floor-tab {
+	float: right;
+    height: 34px;
+}
+.floor-head .floor-tab li {
+	position: relative;
+    float: left;
+    height: 34px;
+    margin-left: 20px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+.floor-head .floor-tab li a {
+    color: #666;
+    font: 14px/34px 'microsoft yahei';
+}
+.floor-head .floor-tab li a:hover {
+    text-decoration: none;
+}
+/*.floor-head .hover-font {
+    font-weight: bold !important;
+    color: #783e18 !important;
+    background-color: white;
+}*/
+.floor-head .floor-tab .on a {
+    font-weight: bold !important;
+    color: #783e18 !important;
+    background-color: white;
+}
+.floor-head .on .up-arrow {
+	display: block;
+}
+.floor-head .up-arrow {
+	display: none;
+	width: 0;
+    height: 0;
+    border-width: 0 11px 9px;
+    border-style: solid;
+    border-color: transparent transparent #783e18;
+    position: absolute;
+    left: 50%;
+    margin-left: -11px;
+    bottom: 0;
+    font-size: 0;
+}
+.floor-main {
+	position: relative;
+    height: 450px;
+    /*overflow: hidden;*/
+}
+.floor-main .side {
+	position: relative;
+    float: left;
+    width: 196px;
+    /*height: 450px;*/
+    overflow: hidden;
+}
+.floor-main .side-img {
+    position: relative;
+    display: block;
+    width: 190px;
+    height: 270px;
+    text-decoration: none;
+}
+.floor-main .side-img img {
+    display: block;
+    width: 190px;
+    height: 270px;
+}
+.floor-main .roll {
+    border-color: transparent transparent transparent #ffe2ec;
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 0 6px;
+}
+.floor-main .entrances {
+	height: 61px;
+	left: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 209px;
+    width: 175px;
+}
+.floor-main .entrances.one-floor {
+    height: 30px;
+    top: 239px;
+}
+.floor-main .entrances li {
+	float: left;
+	background: #Cf3c47;
+	height: 30px;
+	width: 85px;
+	overflow: hidden;
+	margin: 0 1px 1px 0;
+	opacity: 0.8;
+}
+.floor-main .entrances li:hover {
+	cursor: pointer;
+	text-decoration: none;
+	opacity: 0.95;
+}
+.floor-main .entrances li a {
+	float: left;
+	height: 30px;
+    line-height: 30px;
+	/*font-size: 14px;*/
+}
+.floor-main .entrances li a i {
+	float: left;
+    padding-left: 8px;
+    position: relative;
+    width: 16px;
+	color: #fff;
+}
+.floor-main .entrances li a em {
+	float: left;
+	color: #fff;
+	cursor: pointer;
+	font-family: "microsoft yahei";
+}
+.floor-main .brands {
+    height: 168px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    background: #ffd4c1;
+    padding-left: 9px;
+    width: 181px;
+    padding-top: 8px;
+}
+.floor-main .brands li {
+	float: left;
+	height: 50px;
+    width: 85px;
+    background: #fff;
+    margin: 1px 0 0 1px;
+}
+.floor-main .brands li a {
+	font-size: 0;
+    display: block;
+    padding-top: 10px;
+}
+.floor-main .brands li img {
+    display: block;
+    height: 30px;
+    margin: 0 auto;
+    width: 80px;
+}
+.side.brown .brands {
+    background: #ffebc0;
+}
+.side.brown .entrances li {
+    background: #9e652b;
+}
+
+.floor-main img:hover {
+	opacity: 0.8;
+}
+.floor-main .main-cont{
+	float: left;
+    width: 999px;
+    height: 439px;
+    margin-top: 6px;
+    margin-left: -6px;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    /*overflow: hidden;*/
+}
+.floor-main .main-cont .floor-banner{
+	float: left;
+    overflow: hidden;
+    width: 400px;
+	margin: 0 auto;
+    position: relative;
+    height: 440px;
+	/*border-right: 1px solid #eee;*/
+}
+.floor-main .main-cont .floor-banner a {
+	display: block;
+	height: 420px;
+	width: 380px;
+	overflow: hidden;
+	margin: 10px auto;
+}
+.floor-main .main-cont .floor-banner img {
+	display: block;
+	float: left;
+}
+.floor-main .main-cont .col2{
+	border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    float: left;
+    height: 439px;
+    margin-right: -20px;
+    overflow: hidden;
+    position: relative;
+    width: 405px;
+}
+.floor-main .main-cont .col2 li {
+	border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    float: left;
+    height: 219px;
+    overflow: hidden;
+    width: 199px;
+}
+.floor-main .main-cont .col2 li a {
+}
+.floor-main .main-cont .col2 li img {
+	display: block;
+    height: 220px;
+    width: 200px;
+}
+.floor-main .main-cont .col3 {
+	background: #f5f5f5 none repeat scroll 0 0;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    float: right;
+    height: 439px;
+    margin-left: -10px;
+    overflow: hidden;
+    width: 199px;
+}
+.floor-main .main-cont .col3 li {
+	border-bottom: 1px solid #eee;
+    font-size: 0;
+    height: 146px;
+    overflow: hidden;
+}
+.floor-main .main-cont .col3 li img {
+	display: block;
+    height: 147px;
+    width: 200px;
+}
+
+.g-tab-list {
+	display: none;
+}
+.floor-main .main-cont .prd-list {
+    /*overflow: hidden;*/
+    padding-left: 3px;
+}
+.floor-main .main-cont .prd-list li {
+    cursor: pointer;
+    float: left;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+    height: 219px;
+    width: 198px;
+    overflow: hidden;
+    text-align: left;
+    /*line-height: 18px;*/
+}
+.floor-main .main-cont .prd-list li .prd-img {
+	padding-top: 25px;
+}
+
+.floor-main .main-cont .prd-list li .prd-img img {
+    display: block;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+}
+.floor-main .main-cont .prd-list li .name {
+    overflow: hidden;
+    padding: 0 20px;
+}
+.floor-main .main-cont .prd-list li .name a {
+    color: #666;
+    font-family: "microsoft yahei";
+}
+.floor-main .main-cont .prd-list li .price {
+    padding: 2px 15px 0 35px;
+    font-size: 20px;
+    color: #e12228;
+    text-align: left;
+}
+.floor-main .main-cont .prd-list li .price i {
+}
+.floor-main .main-cont .prd-list li .price span {
+	font-family: tahoma;
+}
+.floor-main .main-cont .prd-list li .name a:hover {
+    color: #F60;
+}
+.floor-main .main-cont .prd-list li:hover {
+    box-shadow: 0 2px 10px #999;
+    /*z-index: 1;*/
+}
+
+.floor-main .main-cont .rank {
+    float: right;
+    height: 439px;
+    margin-left: -10px;
+    overflow: hidden;
+    width: 199px;
+}
+.floor-main .main-cont .rank .title {
+    width: 199px;
+    height: 50px;
+    text-align: center;
+    font: 16px "Microsoft Yahei";
+    color: #222;
+    background: url('../img/2floor/rank-logo.png') 0 0 no-repeat;
+}
+.floor-main .main-cont .rank .title p {
+    line-height: 45px;
+}
+
+.floor-main .main-cont .rank ul {
+    margin: 20px 18px 0 18px;
+    overflow: hidden;
+}
+.floor-main .main-cont .rank li {
+    border-bottom: 1px solid #f0f0f0;
+    /*height: 50px;*/
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    font-size: 0;
+    overflow: hidden;
+}
+.floor-main .main-cont .rank li .face {
+    float: left;
+    position: relative;
+    /*left: 10px;*/
+    width: 60px;
+    height: 60px;
+    border: 1px solid #f9f9f9;
+    background-color: #fff;
+}
+.floor-main .main-cont .rank li .face img {
+    display: block;
+}
+.floor-main .main-cont .rank .intro {
+    padding-left: 87px;
+    padding-top: 5px;
+}
+.floor-main .main-cont .rank .intro .name {
+    height: 18px;
+    overflow: hidden;
+}
+.floor-main .main-cont .rank .intro .name a {
+    color: #666;
+    font: 12px/1.5 'microsoft yahei';
+}
+.floor-main .main-cont .rank .intro .name a:hover {
+    color: #f66;
+}
+.floor-main .main-cont .rank .intro .price {
+    margin-top: 6px;
+    height: 24px;
+    font-size: 14px;
+    color: #e12228;
+    overflow: hidden;
+}
+.floor-main .main-cont .rank .intro .price span {
+    font-family: tahoma;
+}
+.floor-main .main-cont .rank li .num {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+.floor-main .main-cont .rank li.item1 .num {
+    background: url('../img/2floor/rank-logo.png') 0 -60px no-repeat;
+}
+.floor-main .main-cont .rank li.item2 .num {
+    background: url('../img/2floor/rank-logo.png') -15px -60px no-repeat;
+}
+.floor-main .main-cont .rank li.item3 .num {
+    background: url('../img/2floor/rank-logo.png') -30px -60px no-repeat;
+}
+.floor-main .main-cont .rank li.item4 .num {
+    background: url('../img/2floor/rank-logo.png') -45px -60px no-repeat;
+}
+/*一楼结束*/
+
+/*广告*/
+.floor-middle-act {
+	min-width: 1190px;
+	width: 1190px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 20px;
+}

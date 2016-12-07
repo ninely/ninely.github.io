@@ -329,4 +329,114 @@ var floorGuide = function () {
     }
 
     function barGuide() {
-        if (floorOffset(0) - 150 
+        if (floorOffset(0) - 150 <= 0) {
+            // 浏览过第一个楼层才进入处理
+            var floors = $(".g-floor");
+            var num = floors.length;
+            for (var index = 1; index < num; index++) {
+                var len = floorOffset(index);
+                if (floorOffset(index) - 150 < 0) {
+                    barNodes.eq(index).addClass("on").siblings().removeClass("on");
+                    return
+                }
+            }
+            barNodes.eq(0).addClass("on").siblings().removeClass("on");
+        } else {
+            barNodes.removeClass("on");
+        }
+    }
+
+    barGuide();
+    $(window).scroll(function () {
+        if (bigscreen) {
+            barGuide();
+        }
+    });
+};
+
+// 右侧导航显隐
+var sidebarEffect = function () {
+    var sidebars = $(".sidebar"),
+        member = sidebars.find(".sidebar-tab-member"),
+        hideBars = sidebars.find(".sidebar-tab").not(".sidebar-tab-cart, .sidebar-to-top, .sidebar-tab-member"),
+        bg = sidebars.find(".sidebar-bg")
+
+    function sidebarShow () {
+        bg.show();
+        // 屏幕高度过小时隐藏部分元素
+        if ($(window).height() < 520) {
+            member.css("visibility", "hidden");
+            hideBars.addClass("hide");
+        } else {
+            member.css("visibility", "visible");
+            hideBars.removeClass("hide");
+        }
+    }
+    function sidebarHide () {
+        bg.hide();
+        member.css("visibility", "hidden");
+        hideBars.addClass("hide");
+    }
+    sidebars.hover(function () {
+        if (!bigscreen) {
+            sidebarShow();
+        }
+    }, function () {
+        if (!bigscreen) {
+            sidebarHide();
+        }
+    })
+    // 小屏幕时自动隐藏
+    if (!bigscreen) {
+        sidebarHide();
+    } else {
+        sidebarShow();
+    }
+    $(window).resize(function () {
+        if (!bigscreen) {
+            sidebarHide();
+        } else {
+            sidebarShow();
+        }
+    });
+};
+
+// 右侧导航右拉效果
+var sidebarHover = function () {
+    var tabs = $(".sidebar-tab"),
+        isCode = false;
+    // tabs.each(function () {
+    //     var thisTab = $(this);
+    //     thisTab.hover(function () {
+    //         $(this).find(".tab-tip").stop().animate({"left": "-47px"}, 600);
+    //     }, function () {
+    //         $(this).find(".tab-tip").stop().animate({"left": "47px"}, 400);
+    //     });
+    // });
+    tabs.hover(function () {
+        $(this).hasClass("sidebar-wider-tab") ? $(this).find(".tab-tip").stop().animate({
+            left: "-73px"
+        }, "normal") : $(this).find(".tab-tip").stop().animate({
+            left: "-47px"
+        }, "normal")
+        if ($(this).hasClass("sidebar-code")) {
+            isCode = true;
+            $(".sidebar").find(".tab-tip-code-warp").stop().show().animate({left: "-160px"}, "normal");
+        }
+    }, function () {
+        $(this).find(".tab-tip").stop().animate({left: "0"}, "normal");
+        if (isCode) {
+            isCode = false;
+            $(".sidebar").find(".tab-tip-code-warp").stop().animate({left: "0px"}, "normal", function () {
+                $(this).hide();
+            })
+        }
+    })
+};
+
+$(document).ready(function () {
+    floatBarEffect();
+    floorGuide();
+    sidebarEffect();
+    sidebarHover();
+});

@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[hexo-next主题配置]]></title>
       <url>%2Fpost%2Fblog%2F2016-12-08-hexo-next.html</url>
-      <content type="text"><![CDATA[hexo还有一个好处就是拥有很多漂亮的主题，其中我选择了next，然后把配置过程中遇到的一些问题写下来备忘。 设置「阅读全文」 在文章中使用 &lt;!-- more --&gt; 手动进行截断，Hexo 提供的方式 在文章的 front-matter 中添加 description，并提供文章摘录 自动形成摘要，在 主题配置文件 中添加： 添加标签页（categories和tags）123456$ hexo new page tags$ hexo new page categories$ vim source/tags/index.md ### add line: type: &quot;tags&quot;$ vim source/categories/index.md### add line: type: &quot;categories&quot; 原理：分别在 source 下生成 tags 和 categories 文件夹，并在里面的文件中分别添加一行代码之后就可以访问 /tags/index.html 页面。（如有问题可尝试一下步骤）1.删除 db.json2.hexo clean3.hexo g 参考next官方手册]]></content>
+      <content type="text"><![CDATA[hexo还有一个好处就是拥有很多漂亮的主题，其中我选择了next，然后把配置过程中遇到的一些问题写下来备忘。 设置「阅读全文」有三种方式： 在文章中使用 &lt;!-- more --&gt; 手动进行截断，Hexo 提供的方式 在文章的 front-matter 中添加 description，并提供文章摘录 自动形成摘要，在 主题配置文件 中添加： 添加标签页（categories和tags）123456$ hexo new page tags$ hexo new page categories$ vim source/tags/index.md ### add line: type: &quot;tags&quot;$ vim source/categories/index.md### add line: type: &quot;categories&quot; 原理：分别在 source 下生成 tags 和 categories 文件夹，并在里面的文件中分别添加一行代码之后就可以访问 /tags/index.html 页面。（如有问题可尝试一下步骤）1.删除 db.json2.hexo clean3.hexo g 参考next官方手册]]></content>
     </entry>
 
     

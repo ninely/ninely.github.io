@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ninely.top/"/>
-  <updated>2016-12-08T04:49:52.615Z</updated>
+  <updated>2016-12-08T05:15:07.789Z</updated>
   <id>http://www.ninely.top/</id>
   
   <author>
@@ -20,13 +20,15 @@
     <link href="http://www.ninely.top/post/blog/2016-12-08-hexo-next.html"/>
     <id>http://www.ninely.top/post/blog/2016-12-08-hexo-next.html</id>
     <published>2016-12-08T03:43:06.000Z</published>
-    <updated>2016-12-08T04:49:52.615Z</updated>
+    <updated>2016-12-08T05:15:07.789Z</updated>
     
     <content type="html"><![CDATA[<p>hexo还有一个好处就是拥有很多漂亮的主题，其中我选择了next，然后把配置过程中遇到的一些问题写下来备忘。</p>
-<h3 id="设置「阅读全文」"><a href="#设置「阅读全文」" class="headerlink" title="设置「阅读全文」"></a>设置「阅读全文」</h3><ol>
+<h3 id="设置「阅读全文」"><a href="#设置「阅读全文」" class="headerlink" title="设置「阅读全文」"></a>设置「阅读全文」</h3><p>有三种方式：</p>
+<ol>
 <li>在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，Hexo 提供的方式</li>
 <li>在文章的 front-matter 中添加 description，并提供文章摘录</li>
-<li>自动形成摘要，在 主题配置文件 中添加：<br><a href="/img/201612081249.jpg"></a></li>
+<li>自动形成摘要，在 主题配置文件 中添加：<img src="/img/201612081249.jpg" class="full-image">
+</li>
 </ol>
 <h3 id="添加标签页（categories和tags）"><a href="#添加标签页（categories和tags）" class="headerlink" title="添加标签页（categories和tags）"></a>添加标签页（categories和tags）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ hexo new page tags</div><div class="line">$ hexo new page categories</div><div class="line">$ vim source/tags/index.md </div><div class="line">### add line: type: &quot;tags&quot;</div><div class="line">$ vim source/categories/index.md</div><div class="line">### add line: type: &quot;categories&quot;</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -37,10 +39,12 @@
     <summary type="html">
     
       &lt;p&gt;hexo还有一个好处就是拥有很多漂亮的主题，其中我选择了next，然后把配置过程中遇到的一些问题写下来备忘。&lt;/p&gt;
-&lt;h3 id=&quot;设置「阅读全文」&quot;&gt;&lt;a href=&quot;#设置「阅读全文」&quot; class=&quot;headerlink&quot; title=&quot;设置「阅读全文」&quot;&gt;&lt;/a&gt;设置「阅读全文」&lt;/h3&gt;&lt;ol&gt;
+&lt;h3 id=&quot;设置「阅读全文」&quot;&gt;&lt;a href=&quot;#设置「阅读全文」&quot; class=&quot;headerlink&quot; title=&quot;设置「阅读全文」&quot;&gt;&lt;/a&gt;设置「阅读全文」&lt;/h3&gt;&lt;p&gt;有三种方式：&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;在文章中使用 &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt; 手动进行截断，Hexo 提供的方式&lt;/li&gt;
 &lt;li&gt;在文章的 front-matter 中添加 description，并提供文章摘录&lt;/li&gt;
-&lt;li&gt;自动形成摘要，在 主题配置文件 中添加：&lt;br&gt;&lt;a href=&quot;/img/201612081249.jpg&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;自动形成摘要，在 主题配置文件 中添加：&lt;img src=&quot;/img/201612081249.jpg&quot; class=&quot;full-image&quot;&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;添加标签页（categories和tags）&quot;&gt;&lt;a href=&quot;#添加标签页（categories和tags）&quot; class=&quot;headerlink&quot; title=&quot;添加标签页（categories和tags）&quot;&gt;&lt;/a&gt;添加标签页（categories和tags）&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new page tags&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new page categories&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ vim source/tags/index.md &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;### add line: type: &amp;quot;tags&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ vim source/categories/index.md&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;### add line: type: &amp;quot;categories&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     

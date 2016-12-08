@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ninely.top/about/index.html</loc>
+    
+    <lastmod>2016-12-08T14:11:00.500Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ninely.top/tags/index.html</loc>
+    
+    <lastmod>2016-12-08T13:41:45.292Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ninely.top/post/javascript/2016-12-08-jquery-hover.html</loc>
     
     <lastmod>2016-12-08T09:16:21.162Z</lastmod>
@@ -30,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://www.ninely.top/about/index.html</loc>
-    
-    <lastmod>2016-12-08T05:17:24.385Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ninely.top/post/blog/2016-12-07-hexo-blog.html</loc>
     
     <lastmod>2016-12-08T03:45:31.653Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://www.ninely.top/categories/index.html</loc>
     
     <lastmod>2016-12-08T03:30:25.358Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ninely.top/tags/index.html</loc>
-    
-    <lastmod>2016-12-08T03:28:50.984Z</lastmod>
     
   </url>
   

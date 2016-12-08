@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Ninely的小站">
 <meta property="og:description" content="最近才开始想搭建自己的博客，刚刚做了个雏形出来，搭建过程中查找网上的教程很多很杂，所以我想把这整个过程自己总结一下,写点东西记录下来以便不时之需。
 创建远程仓库RepositoryGithub Pages生成网站的两种方式的基本原理方式一Github 会给每个用户分配一个域名（username.github.io），有一个项目名为 username.github.io （固定格式，username">
-<meta property="og:updated_time" content="2016-12-08T01:51:29.386Z">
+<meta property="og:updated_time" content="2016-12-08T03:03:07.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github搭建个人博客前的准备">
 <meta name="twitter:description" content="最近才开始想搭建自己的博客，刚刚做了个雏形出来，搭建过程中查找网上的教程很多很杂，所以我想把这整个过程自己总结一下,写点东西记录下来以便不时之需。
@@ -331,7 +331,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-12-08T09:51:29+08:00">
+            <time title="Post modified" itemprop="dateModified" datetime="2016-12-08T11:03:07+08:00">
               2016-12-08
             </time>
             
@@ -408,7 +408,7 @@
 </ol>
 <p>任选上面一种方式创建远程仓库</p>
 <h2 id="为GitHub账号添加SSH-Keys"><a href="#为GitHub账号添加SSH-Keys" class="headerlink" title="为GitHub账号添加SSH Keys"></a>为GitHub账号添加SSH Keys</h2><p>（已配置过ssh的跳过）<br>安装git客户端<br>在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys：<br><code>ls -al ~/.ssh</code><br>输入以下指令（你注册Github时候的邮箱）生成新的ssh key：<br><code>ssh-keygen -t rsa -C &quot;youremail@domain.com&quot;</code><br>然后系统会要你输入密码：<br><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</code><br><code>Enter same passphrase again:&lt;再次输入加密串&gt;</code><br>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。<br>在自己的目录（C:\Documents and Settings）下有一个.ssh目录，有id_rsa 私钥和id_rsa.pub公钥文件，说明成功了。<br>接下来打开github，找到账户里面添加SSH，把idrsa.pub内容复制到key里面。<br>使用下面的命令测试（过程中输入yes即可）<br><code>ssh -T git@github.com</code><br>以上就表示SSH配置好了<br>设置Git用户名和email：<br><code>git config --global user.name &quot;Your Name&quot;</code><br><code>git config --global user.email &quot;youremail@domain.com&quot;</code></p>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://pwnny.cn/original/2016/06/26/MakeBlog.html" target="_blank" rel="external">http://pwnny.cn/original/2016/06/26/MakeBlog.html</a><br><a id="more"></a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://pwnny.cn/original/2016/06/26/MakeBlog.html" target="_blank" rel="external">http://pwnny.cn/original/2016/06/26/MakeBlog.html</a></p>
 
       
     </div>

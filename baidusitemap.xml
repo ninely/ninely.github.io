@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://www.ninely.top/post/hexo/2016-12-07-hexo-blog.html</loc>
+    <lastmod>2016-12-08T03:03:12.148Z</lastmod>
+    <data>
+        <display>
+        <title>hexo搭建个人博客</title>
+        <pubTime>2016-12-07T10:21:13.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://www.ninely.top/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ninely.top/post/github/2016-12-07-github-blog.html</loc>
-    <lastmod>2016-12-08T01:51:29.386Z</lastmod>
+    <lastmod>2016-12-08T03:03:07.829Z</lastmod>
     <data>
         <display>
         <title>Github搭建个人博客前的准备</title>
@@ -24,28 +44,6 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://www.ninely.top/post/hexo/2016-12-07-hexo-blog.html</loc>
-    <lastmod>2016-12-08T01:51:21.984Z</lastmod>
-    <data>
-        <display>
-        <title>hexo搭建个人博客</title>
-        <pubTime>2016-12-07T10:21:13.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://www.ninely.top/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
     
     
   <url>

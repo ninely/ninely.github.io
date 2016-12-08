@@ -92,7 +92,7 @@
     <link href="http://www.ninely.top/post/blog/2016-12-07-github-blog.html"/>
     <id>http://www.ninely.top/post/blog/2016-12-07-github-blog.html</id>
     <published>2016-12-07T08:21:13.000Z</published>
-    <updated>2016-12-08T04:48:51.318Z</updated>
+    <updated>2016-12-08T05:29:55.373Z</updated>
     
     <content type="html"><![CDATA[<p>最近才开始想搭建自己的博客，刚刚做了个雏形出来，搭建过程中查找网上的教程很多很杂，所以我想把这整个过程自己总结一下,写点东西记录下来以便不时之需。</p>
 <h2 id="创建远程仓库Repository"><a href="#创建远程仓库Repository" class="headerlink" title="创建远程仓库Repository"></a>创建远程仓库Repository</h2><h3 id="Github-Pages生成网站的两种方式的基本原理"><a href="#Github-Pages生成网站的两种方式的基本原理" class="headerlink" title="Github Pages生成网站的两种方式的基本原理"></a>Github Pages生成网站的两种方式的基本原理</h3><h4 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h4><p>Github 会给每个用户分配一个域名（username.github.io），有一个项目名为 username.github.io （固定格式，username与账号名一致），项目分支名为 master （默认固定），当你访问 <code>http://username.github.io/</code> 时，Github 会解析该项目中分支为 master 的源代码，为你构建一个静态网站，并将生成的 index.html 展示给你。</p>
@@ -102,7 +102,7 @@
 <li>建立名为 project 的项目，在 gh-pages 分支下存放网站源代码。</li>
 </ol>
 <p>任选上面一种方式创建远程仓库</p>
-<h2 id="为GitHub账号添加SSH-Keys"><a href="#为GitHub账号添加SSH-Keys" class="headerlink" title="为GitHub账号添加SSH Keys"></a>为GitHub账号添加SSH Keys</h2><p>（已配置过ssh的跳过）<br>安装git客户端<br>在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys：<br><code>ls -al ~/.ssh</code><br>输入以下指令（你注册Github时候的邮箱）生成新的ssh key：<br><code>ssh-keygen -t rsa -C &quot;youremail@domain.com&quot;</code><br>然后系统会要你输入密码：<br><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</code><br><code>Enter same passphrase again:&lt;再次输入加密串&gt;</code><br>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。<br>在自己的目录（C:\Documents and Settings）下有一个.ssh目录，有id_rsa 私钥和id_rsa.pub公钥文件，说明成功了。<br>接下来打开github，找到账户里面添加SSH，把idrsa.pub内容复制到key里面。<br>使用下面的命令测试（过程中输入yes即可）<br><code>ssh -T git@github.com</code><br>以上就表示SSH配置好了<br>设置Git用户名和email：<br><code>git config --global user.name &quot;Your Name&quot;</code><br><code>git config --global user.email &quot;youremail@domain.com&quot;</code></p>
+<h2 id="为GitHub账号添加SSH-Keys"><a href="#为GitHub账号添加SSH-Keys" class="headerlink" title="为GitHub账号添加SSH Keys"></a>为GitHub账号添加SSH Keys</h2><p>（已配置过ssh的跳过）<br>安装git客户端<br>在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys：<br><code>ls -al ~/.ssh</code><br>输入以下指令（你注册Github时候的邮箱）生成新的ssh key：<br><code>ssh-keygen -t rsa -C &quot;youremail@domain.com&quot;</code><br>然后系统会要你输入密码：<br><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</code><br><code>Enter same passphrase again:&lt;再次输入加密串&gt;</code><br>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。<br>在自己的目录（C:\Documents and Settings）下有一个.ssh目录，有id_rsa 私钥和id_rsa.pub公钥文件，说明成功了。<br><img src="/img/201612071949.jpg"><br>接下来打开github，找到账户里面添加SSH，把idrsa.pub内容复制到key里面。<br>使用下面的命令测试（过程中输入yes即可）<br><code>ssh -T git@github.com</code><br>以上就表示SSH配置好了<br>设置Git用户名和email：<br><code>git config --global user.name &quot;Your Name&quot;</code><br><code>git config --global user.email &quot;youremail@domain.com&quot;</code></p>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://pwnny.cn/original/2016/06/26/MakeBlog.html" target="_blank" rel="external">Jekyll和Github搭建个人静态博客</a></p>
 ]]></content>
     
@@ -124,18 +124,27 @@
   </entry>
   
   <entry>
-    <title>next</title>
-    <link href="http://www.ninely.top/post/blog/2016-11-14-next.html"/>
-    <id>http://www.ninely.top/post/blog/2016-11-14-next.html</id>
+    <title>仿苏宁首页html</title>
+    <link href="http://www.ninely.top/post/html/2016-11-14-suning-html.html"/>
+    <id>http://www.ninely.top/post/html/2016-11-14-suning-html.html</id>
     <published>2016-11-14T03:46:41.000Z</published>
-    <updated>2016-12-08T04:24:23.661Z</updated>
+    <updated>2016-12-08T08:33:42.282Z</updated>
+    
+    <content type="html"><![CDATA[<p>闲暇时仿照着苏宁做了个首页，主要是为了熟悉一下CSS，顺便学习网站的页面结构和布局方式，网上也有很多仿照的例子，我随便找一个做参考，最后做出来还原度还是挺高的，感觉还不错（当然中间有些内容太多就偷工减料了，毕竟只是练下手）。<br><img src="/img/201612052011.jpg"></p>
+<h4 id="演示地址-源码"><a href="#演示地址-源码" class="headerlink" title="演示地址    源码"></a><a href="http://www.ninely.top/demo/suning/index">演示地址</a>    <a href="https://github.com/ninely/Suning_html" target="_blank" rel="external">源码</a></h4>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;闲暇时仿照着苏宁做了个首页，主要是为了熟悉一下CSS，顺便学习网站的页面结构和布局方式，网上也有很多仿照的例子，我随便找一个做参考，最后做出来还原度还是挺高的，感觉还不错（当然中间有些内容太多就偷工减料了，毕竟只是练下手）。&lt;br&gt;&lt;img src=&quot;/img/201612
+    
     </summary>
     
-      <category term="blog" scheme="http://www.ninely.top/categories/blog/"/>
+      <category term="html" scheme="http://www.ninely.top/categories/html/"/>
     
+    
+      <category term="html" scheme="http://www.ninely.top/tags/html/"/>
+    
+      <category term="css" scheme="http://www.ninely.top/tags/css/"/>
     
   </entry>
   

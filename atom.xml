@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ninely.top/"/>
-  <updated>2016-12-08T03:03:12.148Z</updated>
+  <updated>2016-12-08T04:49:52.615Z</updated>
   <id>http://www.ninely.top/</id>
   
   <author>
@@ -16,14 +16,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo-next主题配置</title>
+    <link href="http://www.ninely.top/post/blog/2016-12-08-hexo-next.html"/>
+    <id>http://www.ninely.top/post/blog/2016-12-08-hexo-next.html</id>
+    <published>2016-12-08T03:43:06.000Z</published>
+    <updated>2016-12-08T04:49:52.615Z</updated>
+    
+    <content type="html"><![CDATA[<p>hexo还有一个好处就是拥有很多漂亮的主题，其中我选择了next，然后把配置过程中遇到的一些问题写下来备忘。</p>
+<h3 id="设置「阅读全文」"><a href="#设置「阅读全文」" class="headerlink" title="设置「阅读全文」"></a>设置「阅读全文」</h3><ol>
+<li>在文章中使用 <code>&lt;!-- more --&gt;</code> 手动进行截断，Hexo 提供的方式</li>
+<li>在文章的 front-matter 中添加 description，并提供文章摘录</li>
+<li>自动形成摘要，在 主题配置文件 中添加：<br><a href="/img/201612081249.jpg"></a></li>
+</ol>
+<h3 id="添加标签页（categories和tags）"><a href="#添加标签页（categories和tags）" class="headerlink" title="添加标签页（categories和tags）"></a>添加标签页（categories和tags）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ hexo new page tags</div><div class="line">$ hexo new page categories</div><div class="line">$ vim source/tags/index.md </div><div class="line">### add line: type: &quot;tags&quot;</div><div class="line">$ vim source/categories/index.md</div><div class="line">### add line: type: &quot;categories&quot;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>原理：分别在 source 下生成 tags 和 categories 文件夹，并在里面的文件中分别添加一行代码之后就可以访问 /tags/index.html 页面。<br>（如有问题可尝试一下步骤）<br>1.删除 db.json<br>2.hexo clean<br>3.hexo g</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next官方手册</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hexo还有一个好处就是拥有很多漂亮的主题，其中我选择了next，然后把配置过程中遇到的一些问题写下来备忘。&lt;/p&gt;
+&lt;h3 id=&quot;设置「阅读全文」&quot;&gt;&lt;a href=&quot;#设置「阅读全文」&quot; class=&quot;headerlink&quot; title=&quot;设置「阅读全文」&quot;&gt;&lt;/a&gt;设置「阅读全文」&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;在文章中使用 &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt; 手动进行截断，Hexo 提供的方式&lt;/li&gt;
+&lt;li&gt;在文章的 front-matter 中添加 description，并提供文章摘录&lt;/li&gt;
+&lt;li&gt;自动形成摘要，在 主题配置文件 中添加：&lt;br&gt;&lt;a href=&quot;/img/201612081249.jpg&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;添加标签页（categories和tags）&quot;&gt;&lt;a href=&quot;#添加标签页（categories和tags）&quot; class=&quot;headerlink&quot; title=&quot;添加标签页（categories和tags）&quot;&gt;&lt;/a&gt;添加标签页（categories和tags）&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new page tags&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new page categories&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ vim source/tags/index.md &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;### add line: type: &amp;quot;tags&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ vim source/categories/index.md&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;### add line: type: &amp;quot;categories&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.ninely.top/categories/blog/"/>
+    
+    
+      <category term="hexo" scheme="http://www.ninely.top/tags/hexo/"/>
+    
+      <category term="next" scheme="http://www.ninely.top/tags/next/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo搭建个人博客</title>
-    <link href="http://www.ninely.top/post/hexo/2016-12-07-hexo-blog.html"/>
-    <id>http://www.ninely.top/post/hexo/2016-12-07-hexo-blog.html</id>
+    <link href="http://www.ninely.top/post/blog/2016-12-07-hexo-blog.html"/>
+    <id>http://www.ninely.top/post/blog/2016-12-07-hexo-blog.html</id>
     <published>2016-12-07T10:21:13.000Z</published>
-    <updated>2016-12-08T03:03:12.148Z</updated>
+    <updated>2016-12-08T03:45:31.653Z</updated>
     
     <content type="html"><![CDATA[<h3 id="选择hexo"><a href="#选择hexo" class="headerlink" title="选择hexo"></a>选择hexo</h3><p>通过 Github Pages直接写的HTML静态博客维护起来相当麻烦，相当累人，所以我在网上了解到目前一些比较流行的两个静态博客框架Jekyll和Hexo。<br>两者的区别：<br>Jeky基于Ruby实现，安装Jeky需要搭建Ruby环境，在Windows搭建Ruby环境并不是被推荐的，而 Hexo基于NodeJs实现，在Windows上安装NodeJs开发环境简单。<br>Jekyll没有本地服务器，无法实现本地博文预览功能，需要上传到WEB容器中才能预览功能，而Hexo可以通过简单的命令实现本地的预览，并直接发布到WEB容器中实现同步。<br>因为我电脑上装了nodejs，就直接选择hexo来搭建我的博客。</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>安装nodejs非常简单就略过，由于在国内使用npm（NPM是随同NodeJS一起安装的包管理工具）下载扩展速度很慢，大多数推荐使用淘宝NPM镜像替代，输入以下命令等待安装：<br><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br>这样就可以用cnpm代替npm命令，完在电脑上新建一个blog（自定义）文件夹,该文件夹用于存放你的博客文件,然后右键单击选择 Git Bash<br><code>$ cnpm install -g hexo-cli</code><br>出现的WARN可以不用理会，继续输入以下命令<br><code>$ cnpm install hexo --save</code><br>安装完成后，在输入命令，验证是否安装正确<br><code>$ hexo -v</code><br><code>$ hexo init</code> #初始化<br>每次部署的步骤，可按以下三步来进行：<br><code>$ hexo clean</code><br><code>$ hexo generate</code><br><code>$ hexo deploy</code><br>一些常用命令：<br><code>$ hexo new &quot;postName&quot;</code> #新建文章<br><code>$ hexo new page &quot;pageName&quot;</code> #新建页面<br><code>$ hexo generate</code> #生成静态页面至public目录<br><code>$ hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>$ hexo deploy</code> #将.deploy目录部署到GitHub<br><code>$ hexo help</code> #查看帮助<br><code>$ hexo version</code> #查看Hexo的版本</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>安装nodejs非常简单就略过，由于在国内使用npm（NPM是随同NodeJS一起安装的包管理工具）下载扩展速度很慢，大多数推荐使用淘宝NPM镜像替代，输入以下命令等待安装：<br><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br><a id="more"></a><br>这样就可以用cnpm代替npm命令，完在电脑上新建一个blog（自定义）文件夹,该文件夹用于存放你的博客文件,然后右键单击选择 Git Bash<br><code>$ cnpm install -g hexo-cli</code><br>出现的WARN可以不用理会，继续输入以下命令<br><code>$ cnpm install hexo --save</code><br>安装完成后，在输入命令，验证是否安装正确<br><code>$ hexo -v</code><br><code>$ hexo init</code> #初始化<br>每次部署的步骤，可按以下三步来进行：<br><code>$ hexo clean</code><br><code>$ hexo generate</code><br><code>$ hexo deploy</code><br>一些常用命令：<br><code>$ hexo new &quot;postName&quot;</code> #新建文章<br><code>$ hexo new page &quot;pageName&quot;</code> #新建页面<br><code>$ hexo generate</code> #生成静态页面至public目录<br><code>$ hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>$ hexo deploy</code> #将.deploy目录部署到GitHub<br><code>$ hexo help</code> #查看帮助<br><code>$ hexo version</code> #查看Hexo的版本</p>
 <h3 id="hexo文件结构及配置"><a href="#hexo文件结构及配置" class="headerlink" title="hexo文件结构及配置"></a>hexo文件结构及配置</h3><p><code>_config.yml</code>:网站的 配置 信息，您可以在此配置大部分的参数。<br><code>package.json</code>:应用程序的信息。<br><code>scaffolds</code>:模版文件夹。当您新建文章时，Hexo会根据scaffold 来建立文件。<br><code>source</code>:资源文件夹是存放用户资源的地方。除posts文件夹之外，开头命名为(下划线)的文件/文件夹和隐藏的文件将会被忽略。Markdown和HTML文件会被解析并放到public文件夹，而其他文件会被拷贝过去。<br><code>themes</code>:主题 文件夹。Hexo会根据主题来生成静态页面。</p>
 <h3 id="hexo渲染过滤"><a href="#hexo渲染过滤" class="headerlink" title="hexo渲染过滤"></a>hexo渲染过滤</h3><p>生成静态文件过程中通过_config.yml配置中<code>skip_render</code>设置跳过指定文件的渲染，具体配置如下：<br>1.如果要跳过source文件夹下的demo.html：<br><code>skip_render: demo.html</code><br>2.如果要忽略source下的demo文件夹下所有文件：<br><code>skip_render: demo/*</code><br>3.如果要忽略source下的demo文件夹下.html文件：<br><code>skip_render: demo/*.html</code><br>4.如果要忽略source下的demo文件夹下所有文件和目录：<br><code>skip_render: demo/**</code><br>5.如果要忽略多个路径的文件或目录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">skip_render:</div><div class="line">    - demo.html</div><div class="line">    - demo/*</div><div class="line">    - demo/**</div></pre></td></tr></table></figure></p>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://hifor.net/2015/07/01/零基础免费搭建个人博客-hexo-github" target="_blank" rel="external">零基础免费搭建个人博客</a><br><a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="external">hexo常用笔记</a><br><a href="http://www.jianshu.com/p/q81RER#" target="_blank" rel="external">献给写作者的 Markdown 新手指南</a></p>
@@ -31,11 +71,12 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;选择hexo&quot;&gt;&lt;a href=&quot;#选择hexo&quot; class=&quot;headerlink&quot; title=&quot;选择hexo&quot;&gt;&lt;/a&gt;选择hexo&lt;/h3&gt;&lt;p&gt;通过 Github Pages直接写的HTML静态博客维护起来相当麻烦，相当累人，所以我在网上了解到目前一些
+      &lt;h3 id=&quot;选择hexo&quot;&gt;&lt;a href=&quot;#选择hexo&quot; class=&quot;headerlink&quot; title=&quot;选择hexo&quot;&gt;&lt;/a&gt;选择hexo&lt;/h3&gt;&lt;p&gt;通过 Github Pages直接写的HTML静态博客维护起来相当麻烦，相当累人，所以我在网上了解到目前一些比较流行的两个静态博客框架Jekyll和Hexo。&lt;br&gt;两者的区别：&lt;br&gt;Jeky基于Ruby实现，安装Jeky需要搭建Ruby环境，在Windows搭建Ruby环境并不是被推荐的，而 Hexo基于NodeJs实现，在Windows上安装NodeJs开发环境简单。&lt;br&gt;Jekyll没有本地服务器，无法实现本地博文预览功能，需要上传到WEB容器中才能预览功能，而Hexo可以通过简单的命令实现本地的预览，并直接发布到WEB容器中实现同步。&lt;br&gt;因为我电脑上装了nodejs，就直接选择hexo来搭建我的博客。&lt;/p&gt;
+&lt;h3 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h3&gt;&lt;p&gt;安装nodejs非常简单就略过，由于在国内使用npm（NPM是随同NodeJS一起安装的包管理工具）下载扩展速度很慢，大多数推荐使用淘宝NPM镜像替代，输入以下命令等待安装：&lt;br&gt;&lt;code&gt;$ npm install -g cnpm --registry=https://registry.npm.taobao.org&lt;/code&gt;&lt;br&gt;
     
     </summary>
     
-      <category term="hexo" scheme="http://www.ninely.top/categories/hexo/"/>
+      <category term="blog" scheme="http://www.ninely.top/categories/blog/"/>
     
     
       <category term="hexo" scheme="http://www.ninely.top/tags/hexo/"/>
@@ -44,32 +85,32 @@
   
   <entry>
     <title>Github搭建个人博客前的准备</title>
-    <link href="http://www.ninely.top/post/github/2016-12-07-github-blog.html"/>
-    <id>http://www.ninely.top/post/github/2016-12-07-github-blog.html</id>
+    <link href="http://www.ninely.top/post/blog/2016-12-07-github-blog.html"/>
+    <id>http://www.ninely.top/post/blog/2016-12-07-github-blog.html</id>
     <published>2016-12-07T08:21:13.000Z</published>
-    <updated>2016-12-08T03:14:32.759Z</updated>
+    <updated>2016-12-08T04:48:51.318Z</updated>
     
     <content type="html"><![CDATA[<p>最近才开始想搭建自己的博客，刚刚做了个雏形出来，搭建过程中查找网上的教程很多很杂，所以我想把这整个过程自己总结一下,写点东西记录下来以便不时之需。</p>
-<h2 id="创建远程仓库Repository"><a href="#创建远程仓库Repository" class="headerlink" title="创建远程仓库Repository"></a>创建远程仓库Repository</h2><h3 id="Github-Pages生成网站的两种方式的基本原理"><a href="#Github-Pages生成网站的两种方式的基本原理" class="headerlink" title="Github Pages生成网站的两种方式的基本原理"></a>Github Pages生成网站的两种方式的基本原理</h3><h4 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h4><p>Github 会给每个用户分配一个域名（username.github.io），有一个项目名为 username.github.io （固定格式，username与账号名一致），项目分支名为 master （默认固定），当你访问 <a href="http://username.github.io/" target="_blank" rel="external">http://username.github.io/</a> 时，Github 会解析该项目中分支为 master 的源代码，为你构建一个静态网站，并将生成的 index.html 展示给你。</p>
-<h4 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h4><p>Github 还为每个项目提供了域名，创建一个名为 project （任意）的项目，项目分支名为 gh-pages （固定）。那么当你访问 <a href="http://username.github.io/project" target="_blank" rel="external">http://username.github.io/project</a> 时，Github 会去解析该项目的 gh-pages 分支下的源代码，为你构建网站。</p>
-<p>所以要搭建自己的博客你有两种选择：</p>
+<h2 id="创建远程仓库Repository"><a href="#创建远程仓库Repository" class="headerlink" title="创建远程仓库Repository"></a>创建远程仓库Repository</h2><h3 id="Github-Pages生成网站的两种方式的基本原理"><a href="#Github-Pages生成网站的两种方式的基本原理" class="headerlink" title="Github Pages生成网站的两种方式的基本原理"></a>Github Pages生成网站的两种方式的基本原理</h3><h4 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h4><p>Github 会给每个用户分配一个域名（username.github.io），有一个项目名为 username.github.io （固定格式，username与账号名一致），项目分支名为 master （默认固定），当你访问 <code>http://username.github.io/</code> 时，Github 会解析该项目中分支为 master 的源代码，为你构建一个静态网站，并将生成的 index.html 展示给你。</p>
+<h4 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h4><p>Github 还为每个项目提供了域名，创建一个名为 project （任意）的项目，项目分支名为 gh-pages （固定）。那么当你访问 <code>http://username.github.io/project</code> 时，Github 会去解析该项目的 gh-pages 分支下的源代码，为你构建网站。<br><a id="more"></a><br>所以要搭建自己的博客你有两种选择：</p>
 <ol>
 <li>建立名为 username.github.io 的项目，在 master 分支下存放网站源代码</li>
 <li>建立名为 project 的项目，在 gh-pages 分支下存放网站源代码。</li>
 </ol>
 <p>任选上面一种方式创建远程仓库</p>
 <h2 id="为GitHub账号添加SSH-Keys"><a href="#为GitHub账号添加SSH-Keys" class="headerlink" title="为GitHub账号添加SSH Keys"></a>为GitHub账号添加SSH Keys</h2><p>（已配置过ssh的跳过）<br>安装git客户端<br>在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys：<br><code>ls -al ~/.ssh</code><br>输入以下指令（你注册Github时候的邮箱）生成新的ssh key：<br><code>ssh-keygen -t rsa -C &quot;youremail@domain.com&quot;</code><br>然后系统会要你输入密码：<br><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</code><br><code>Enter same passphrase again:&lt;再次输入加密串&gt;</code><br>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。<br>在自己的目录（C:\Documents and Settings）下有一个.ssh目录，有id_rsa 私钥和id_rsa.pub公钥文件，说明成功了。<br>接下来打开github，找到账户里面添加SSH，把idrsa.pub内容复制到key里面。<br>使用下面的命令测试（过程中输入yes即可）<br><code>ssh -T git@github.com</code><br>以上就表示SSH配置好了<br>设置Git用户名和email：<br><code>git config --global user.name &quot;Your Name&quot;</code><br><code>git config --global user.email &quot;youremail@domain.com&quot;</code></p>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://pwnny.cn/original/2016/06/26/MakeBlog.html" target="_blank" rel="external">http://pwnny.cn/original/2016/06/26/MakeBlog.html</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://pwnny.cn/original/2016/06/26/MakeBlog.html" target="_blank" rel="external">Jekyll和Github搭建个人静态博客</a></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;最近才开始想搭建自己的博客，刚刚做了个雏形出来，搭建过程中查找网上的教程很多很杂，所以我想把这整个过程自己总结一下,写点东西记录下来以便不时之需。&lt;/p&gt;
-&lt;h2 id=&quot;创建远程仓库Repository&quot;&gt;&lt;a href=&quot;#创建远程仓库Repository&quot; class
+&lt;h2 id=&quot;创建远程仓库Repository&quot;&gt;&lt;a href=&quot;#创建远程仓库Repository&quot; class=&quot;headerlink&quot; title=&quot;创建远程仓库Repository&quot;&gt;&lt;/a&gt;创建远程仓库Repository&lt;/h2&gt;&lt;h3 id=&quot;Github-Pages生成网站的两种方式的基本原理&quot;&gt;&lt;a href=&quot;#Github-Pages生成网站的两种方式的基本原理&quot; class=&quot;headerlink&quot; title=&quot;Github Pages生成网站的两种方式的基本原理&quot;&gt;&lt;/a&gt;Github Pages生成网站的两种方式的基本原理&lt;/h3&gt;&lt;h4 id=&quot;方式一&quot;&gt;&lt;a href=&quot;#方式一&quot; class=&quot;headerlink&quot; title=&quot;方式一&quot;&gt;&lt;/a&gt;方式一&lt;/h4&gt;&lt;p&gt;Github 会给每个用户分配一个域名（username.github.io），有一个项目名为 username.github.io （固定格式，username与账号名一致），项目分支名为 master （默认固定），当你访问 &lt;code&gt;http://username.github.io/&lt;/code&gt; 时，Github 会解析该项目中分支为 master 的源代码，为你构建一个静态网站，并将生成的 index.html 展示给你。&lt;/p&gt;
+&lt;h4 id=&quot;方式二&quot;&gt;&lt;a href=&quot;#方式二&quot; class=&quot;headerlink&quot; title=&quot;方式二&quot;&gt;&lt;/a&gt;方式二&lt;/h4&gt;&lt;p&gt;Github 还为每个项目提供了域名，创建一个名为 project （任意）的项目，项目分支名为 gh-pages （固定）。那么当你访问 &lt;code&gt;http://username.github.io/project&lt;/code&gt; 时，Github 会去解析该项目的 gh-pages 分支下的源代码，为你构建网站。&lt;br&gt;
     
     </summary>
     
-      <category term="github" scheme="http://www.ninely.top/categories/github/"/>
+      <category term="blog" scheme="http://www.ninely.top/categories/blog/"/>
     
     
       <category term="git" scheme="http://www.ninely.top/tags/git/"/>
@@ -80,14 +121,16 @@
   
   <entry>
     <title>next</title>
-    <link href="http://www.ninely.top/post/other/2016-11-14-next.html"/>
-    <id>http://www.ninely.top/post/other/2016-11-14-next.html</id>
+    <link href="http://www.ninely.top/post/blog/2016-11-14-next.html"/>
+    <id>http://www.ninely.top/post/blog/2016-11-14-next.html</id>
     <published>2016-11-14T03:46:41.000Z</published>
-    <updated>2016-11-14T03:46:41.476Z</updated>
+    <updated>2016-12-08T04:24:23.661Z</updated>
     
     <summary type="html">
     
     </summary>
+    
+      <category term="blog" scheme="http://www.ninely.top/categories/blog/"/>
     
     
   </entry>

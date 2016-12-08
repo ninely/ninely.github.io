@@ -4,8 +4,30 @@
 
     
   <url>
-    <loc>http://www.ninely.top/post/github/2016-12-07-github-blog.html</loc>
-    <lastmod>2016-12-08T03:14:32.759Z</lastmod>
+    <loc>http://www.ninely.top/post/blog/2016-12-08-hexo-next.html</loc>
+    <lastmod>2016-12-08T04:49:52.615Z</lastmod>
+    <data>
+        <display>
+        <title>hexo-next主题配置</title>
+        <pubTime>2016-12-08T03:43:06.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>next</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://www.ninely.top/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ninely.top/post/blog/2016-12-07-github-blog.html</loc>
+    <lastmod>2016-12-08T04:48:51.318Z</lastmod>
     <data>
         <display>
         <title>Github搭建个人博客前的准备</title>
@@ -18,7 +40,7 @@
          
            
              
-              <breadCrumb title="github" url="http://www.ninely.top/categories/github/"/>
+              <breadCrumb title="blog" url="http://www.ninely.top/categories/blog/"/>
           
         </display>
     </data>
@@ -26,8 +48,26 @@
 
     
   <url>
-    <loc>http://www.ninely.top/post/hexo/2016-12-07-hexo-blog.html</loc>
-    <lastmod>2016-12-08T03:03:12.148Z</lastmod>
+    <loc>http://www.ninely.top/post/blog/2016-11-14-next.html</loc>
+    <lastmod>2016-12-08T04:24:23.661Z</lastmod>
+    <data>
+        <display>
+        <title>next</title>
+        <pubTime>2016-11-14T03:46:41.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="blog" url="http://www.ninely.top/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ninely.top/post/blog/2016-12-07-hexo-blog.html</loc>
+    <lastmod>2016-12-08T03:45:31.653Z</lastmod>
     <data>
         <display>
         <title>hexo搭建个人博客</title>
@@ -38,12 +78,14 @@
          
            
              
-              <breadCrumb title="hexo" url="http://www.ninely.top/categories/hexo/"/>
+              <breadCrumb title="blog" url="http://www.ninely.top/categories/blog/"/>
           
         </display>
     </data>
     </url>
 
+    
+    
     
     
   <url>
@@ -61,21 +103,6 @@
              
               <breadCrumb title="other" url="http://www.ninely.top/categories/other/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ninely.top/post/other/2016-11-14-next.html</loc>
-    <lastmod>2016-11-14T03:46:41.476Z</lastmod>
-    <data>
-        <display>
-        <title>next</title>
-        <pubTime>2016-11-14T03:46:41.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>

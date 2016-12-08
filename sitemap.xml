@@ -2,16 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.ninely.top/post/github/2016-12-07-github-blog.html</loc>
+    <loc>http://www.ninely.top/post/blog/2016-12-08-hexo-next.html</loc>
     
-    <lastmod>2016-12-08T03:14:32.759Z</lastmod>
+    <lastmod>2016-12-08T04:49:52.615Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ninely.top/post/hexo/2016-12-07-hexo-blog.html</loc>
+    <loc>http://www.ninely.top/post/blog/2016-12-07-github-blog.html</loc>
     
-    <lastmod>2016-12-08T03:03:12.148Z</lastmod>
+    <lastmod>2016-12-08T04:48:51.318Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ninely.top/post/blog/2016-11-14-next.html</loc>
+    
+    <lastmod>2016-12-08T04:24:23.661Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ninely.top/post/blog/2016-12-07-hexo-blog.html</loc>
+    
+    <lastmod>2016-12-08T03:45:31.653Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ninely.top/categories/index.html</loc>
+    
+    <lastmod>2016-12-08T03:30:25.358Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ninely.top/tags/index.html</loc>
+    
+    <lastmod>2016-12-08T03:28:50.984Z</lastmod>
     
   </url>
   
@@ -26,13 +54,6 @@
     <loc>http://www.ninely.top/post/other/2016-11-13-hello-world.html</loc>
     
     <lastmod>2016-11-15T01:26:53.535Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ninely.top/post/other/2016-11-14-next.html</loc>
-    
-    <lastmod>2016-11-14T03:46:41.476Z</lastmod>
     
   </url>
   

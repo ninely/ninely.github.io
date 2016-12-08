@@ -47,7 +47,7 @@
     <link href="http://www.ninely.top/post/github/2016-12-07-github-blog.html"/>
     <id>http://www.ninely.top/post/github/2016-12-07-github-blog.html</id>
     <published>2016-12-07T08:21:13.000Z</published>
-    <updated>2016-12-08T03:03:07.829Z</updated>
+    <updated>2016-12-08T03:14:32.759Z</updated>
     
     <content type="html"><![CDATA[<p>最近才开始想搭建自己的博客，刚刚做了个雏形出来，搭建过程中查找网上的教程很多很杂，所以我想把这整个过程自己总结一下,写点东西记录下来以便不时之需。</p>
 <h2 id="创建远程仓库Repository"><a href="#创建远程仓库Repository" class="headerlink" title="创建远程仓库Repository"></a>创建远程仓库Repository</h2><h3 id="Github-Pages生成网站的两种方式的基本原理"><a href="#Github-Pages生成网站的两种方式的基本原理" class="headerlink" title="Github Pages生成网站的两种方式的基本原理"></a>Github Pages生成网站的两种方式的基本原理</h3><h4 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h4><p>Github 会给每个用户分配一个域名（username.github.io），有一个项目名为 username.github.io （固定格式，username与账号名一致），项目分支名为 master （默认固定），当你访问 <a href="http://username.github.io/" target="_blank" rel="external">http://username.github.io/</a> 时，Github 会解析该项目中分支为 master 的源代码，为你构建一个静态网站，并将生成的 index.html 展示给你。</p>

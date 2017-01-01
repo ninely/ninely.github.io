@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ninely.top/"/>
-  <updated>2016-12-08T09:16:21.162Z</updated>
+  <updated>2016-12-31T05:48:52.606Z</updated>
   <id>http://www.ninely.top/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP utf-8等宽字符串截取</title>
+    <link href="http://www.ninely.top/post/php/2016-12-31-PHP-utf8_substr.html"/>
+    <id>http://www.ninely.top/post/php/2016-12-31-PHP-utf8_substr.html</id>
+    <published>2016-12-31T05:30:49.000Z</published>
+    <updated>2016-12-31T05:48:52.606Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>网站等宽等像素值展示内容</p>
+<p>UTF-8是1-4字节变长编码，中文都是3字节，截取UTF8编码字符串从首字节开始指定宽度(非长度), 现有的函数只能使用mb_substr这样的针对编码的截取方式，但是这种处理，在全中文与全英文截取差异很大，会出现参差不齐的效果。</p>
+</blockquote>
+<a id="more"></a> 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">/** </div><div class="line"> * </div><div class="line"> * @param string $str   UTF-8 encoding </div><div class="line"> * @param int[option] $width 截取宽度 </div><div class="line"> * @param string[option] $end 被截取后追加的尾字符 </div><div class="line"> * @param float[option] $x3</div><div class="line"> * 3字节（中文）字符相当于希腊字母宽度的系数coefficient（小数） </div><div class="line"> * 中文通常固定用宋体,根据ascii字符字体宽度设定,不同浏览器可能会有不同显示效果 </div><div class="line"> * @return string </div><div class="line"> */ </div><div class="line"></div><div class="line">function utf8_substr($str, $width = 0, $end = &apos;...&apos;, $x3 = 0) &#123;  </div><div class="line">    global $CFG; // 全局变量保存 x3 的值  </div><div class="line">    if ($width &lt;= 0 || $width &gt;= strlen($str)) &#123;  </div><div class="line">        return $str;  </div><div class="line">    &#125;</div><div class="line">    // 中文占3个字节</div><div class="line">    $arr = str_split($str); </div><div class="line">    $len = count($arr);</div><div class="line">    // 实际字符串宽度</div><div class="line">    $strWidth = 0;</div><div class="line">    $width *= 10;  </div><div class="line">  </div><div class="line">    // 不同字节编码字符宽度系数  </div><div class="line">    $x1 = 11;   // ASCII  </div><div class="line">    $x2 = 16;  </div><div class="line">    $x3 = $x3===0 ? ( $CFG[&apos;cf3&apos;]  &gt; 0 ? $CFG[&apos;cf3&apos;]*10 : $x3 = 21 ) : $x3*10;  </div><div class="line">    $x4 = $x3;</div><div class="line">    $endStr = &apos;&apos;;</div><div class="line">    $offset = 0;</div><div class="line">    for ($offset = 0; $offset &lt; $len; $offset++) &#123;  </div><div class="line">        if ($strWidth &gt;= $width) &#123;  </div><div class="line">            $endStr = $end;  </div><div class="line">            break;  </div><div class="line">        &#125;</div><div class="line">        // 根据返回整型的 ASCII 码值判断字符宽度</div><div class="line">        $character = ord($arr[$offset]);  </div><div class="line">        if ($character &lt;= 127) &#123;  </div><div class="line">            $strWidth += $x1;  </div><div class="line">        &#125;  </div><div class="line">        elseif ($character &gt;= 192 &amp;&amp; $character &lt;= 223) &#123; // 2字节头  </div><div class="line">            $strWidth += $x2;  </div><div class="line">            $offset += 1;  </div><div class="line">        &#125;  </div><div class="line">        elseif ($character &gt;= 224 &amp;&amp; $character &lt;= 239) &#123; // 3字节头  </div><div class="line">            $strWidth += $x3;  </div><div class="line">            $offset += 2;  </div><div class="line">        &#125;  </div><div class="line">        elseif ($character &gt;= 240 &amp;&amp; $character &lt;= 247) &#123; // 4字节头  </div><div class="line">            $strWidth += $x4;  </div><div class="line">            $offset += 3;  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    return implode(&apos;&apos;, array_slice($arr, 0, $offset) ). $endStr;  </div><div class="line">&#125;</div><div class="line">// test</div><div class="line">$str1 = &apos;Celine Dion My Love Ultimate Essential Collection My Heart Will Go On&apos;;</div><div class="line">$str2 = &apos;一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十&apos;;</div><div class="line">$str3 = &apos;一二dfd九十&apos;;</div><div class="line">echo &quot;&lt;br /&gt;&quot;;</div><div class="line">echo utf8_substr($str1, 10);</div><div class="line">echo &quot;&lt;hr /&gt;&quot;;</div><div class="line">echo utf8_substr($str2, 10);</div><div class="line">echo &quot;&lt;hr /&gt;&quot;;</div><div class="line">echo utf8_substr($str3, 10);</div></pre></td></tr></table></figure>
+<p><a href="http://waiting.iteye.com/blog/581888" target="_blank" rel="external">参考</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;网站等宽等像素值展示内容&lt;/p&gt;
+&lt;p&gt;UTF-8是1-4字节变长编码，中文都是3字节，截取UTF8编码字符串从首字节开始指定宽度(非长度), 现有的函数只能使用mb_substr这样的针对编码的截取方式，但是这种处理，在全中文与全英文截取差异很大，会出现参差不齐的效果。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="php" scheme="http://www.ninely.top/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://www.ninely.top/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>jQuery:hover延时效果的一些处理</title>

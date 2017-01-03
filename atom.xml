@@ -48,6 +48,45 @@
   </entry>
   
   <entry>
+    <title>Yii2博客系统开发</title>
+    <link href="http://www.ninely.top/post/yii/2016-12-30-yii-blog.html"/>
+    <id>http://www.ninely.top/post/yii/2016-12-30-yii-blog.html</id>
+    <published>2016-12-30T11:11:21.000Z</published>
+    <updated>2017-01-03T03:10:24.018Z</updated>
+    
+    <content type="html"><![CDATA[<p>基于Yii2高级模板开发的博客系统，前后台模块独立，后台基本功能已完善，前台满足正常展示需求。</p>
+<blockquote>
+<ul>
+<li>开发版本</li>
+<li>Yii2：2.0.10</li>
+<li>PHP：5.6.24</li>
+<li>Mysql：5.6.29</li>
+</ul>
+</blockquote>
+<img src="/img/201612302011.jpg">
+<p><a href="https://github.com/ninely/yii_blog" target="_blank" rel="external">源码</a> </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基于Yii2高级模板开发的博客系统，前后台模块独立，后台基本功能已完善，前台满足正常展示需求。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;开发版本&lt;/li&gt;
+&lt;li&gt;Yii2：2.0.10&lt;/li&gt;
+&lt;li&gt;PHP：5.6.24&lt;/li&gt;
+&lt;li&gt;Mysql：5.
+    
+    </summary>
+    
+      <category term="yii" scheme="http://www.ninely.top/categories/yii/"/>
+    
+    
+      <category term="yii" scheme="http://www.ninely.top/tags/yii/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Http常用状态码</title>
     <link href="http://www.ninely.top/post/http/2016-12-15-http-status-code.html"/>
     <id>http://www.ninely.top/post/http/2016-12-15-http-status-code.html</id>

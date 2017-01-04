@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ninely.top/"/>
-  <updated>2016-12-31T05:48:52.606Z</updated>
+  <updated>2017-01-04T03:58:17.519Z</updated>
   <id>http://www.ninely.top/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP大小写敏感规则</title>
+    <link href="http://www.ninely.top/post/php/2017-01-02-PHP-case-sensitive.html"/>
+    <id>http://www.ninely.top/post/php/2017-01-02-PHP-case-sensitive.html</id>
+    <published>2017-01-02T10:45:33.000Z</published>
+    <updated>2017-01-04T03:58:17.519Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<ul>
+<li>测试版本</li>
+<li>PHP：5.6.24</li>
+</ul>
+</blockquote>
+<h4 id="一、大小写敏感"><a href="#一、大小写敏感" class="headerlink" title="一、大小写敏感"></a>一、大小写敏感</h4><ol>
+<li><p>变量名区分大小写</p>
+<blockquote>
+<p>所有变量均区分大小写，包括$_GET，$_POST，$_REQUEST，$_COOKIE，$_SESSION，$GLOBALS，$_SERVER，$_FILES，$_ENV 等；</p>
+</blockquote>
+</li>
+<li><p>常量名默认区分大小写</p>
+</li>
+<li><p>php.ini配置项指令区分大小写</p>
+</li>
+<li><p>数组索引（键名）区分大小写</p>
+</li>
+</ol>
+<a id="more"></a> 
+<h4 id="二、大小写不敏感"><a href="#二、大小写不敏感" class="headerlink" title="二、大小写不敏感"></a>二、大小写不敏感</h4><ol>
+<li><p>函数名、方法名、类名(包括类中方法) 不区分大小写</p>
+</li>
+<li><p>魔术常量不区分大小写，推荐大写</p>
+</li>
+<li><p>NULL、TRUE、FALSE不区分大小写</p>
+</li>
+<li><p>类型强制转换，不区分大小写</p>
+<blockquote>
+<ul>
+<li>(int)，(integer) – 转换成整型</li>
+<li>(bool)，(boolean) – 转换成布尔型</li>
+<li>(float)，(double)，(real) – 转换成浮点型</li>
+<li>(string) – 转换成字符串</li>
+<li>(array) – 转换成数组</li>
+<li>(object) – 转换成对象</li>
+</ul>
+</blockquote>
+</li>
+<li>命名空间不区分大小写</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;测试版本&lt;/li&gt;
+&lt;li&gt;PHP：5.6.24&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;一、大小写敏感&quot;&gt;&lt;a href=&quot;#一、大小写敏感&quot; class=&quot;headerlink&quot; title=&quot;一、大小写敏感&quot;&gt;&lt;/a&gt;一、大小写敏感&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;变量名区分大小写&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所有变量均区分大小写，包括$_GET，$_POST，$_REQUEST，$_COOKIE，$_SESSION，$GLOBALS，$_SERVER，$_FILES，$_ENV 等；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;常量名默认区分大小写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;php.ini配置项指令区分大小写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数组索引（键名）区分大小写&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="php" scheme="http://www.ninely.top/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://www.ninely.top/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP utf-8等宽字符串截取</title>

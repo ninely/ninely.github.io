@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ninely.top/"/>
-  <updated>2017-01-04T03:58:17.519Z</updated>
+  <updated>2017-01-22T03:52:35.032Z</updated>
   <id>http://www.ninely.top/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP中global与$GLOBALS[&#39;&#39;]分析</title>
+    <link href="http://www.ninely.top/post/php/2017-01-22-PHP-global.html"/>
+    <id>http://www.ninely.top/post/php/2017-01-22-PHP-global.html</id>
+    <published>2017-01-22T03:32:35.000Z</published>
+    <updated>2017-01-22T03:52:35.032Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>根据官方的解释：<br>$GLOBALS[‘var’] 是外部的全局变量$var本身<br>global $var 是外部$var的同名引用</p>
+</blockquote>
+<a id="more"></a> 
+<p>举例说明一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$var1 = 1;</div><div class="line">$var2 = 2;</div><div class="line">function test() &#123;</div><div class="line">$GLOBALS[&apos;var2&apos;] = &amp;$GLOBALS[&apos;var1&apos;];</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line">echo $var2; // 输出 1</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$var1 = 1;</div><div class="line">$var2 = 2;</div><div class="line"></div><div class="line">function test()&#123;</div><div class="line">global $var1, $var2;</div><div class="line">$var2 = &amp;$var1;</div><div class="line">echo $var2;</div><div class="line">$var2 = &apos;snsgou.com&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">test(); // 输出 1</div><div class="line">echo $var2; // 输出 2</div><div class="line">echo $var1; // 输出 snsgou.com</div></pre></td></tr></table></figure>
+<p>test()函数中的$var1，$va2都是局部变量，只不过是加了global关键字后，分别引用指向全局变量$var1，$var2了，当 <code>$var2 = &amp;$var1</code>; 时，局部变量$var2不再指向全局变量$var2，而重新指向全局变量$var1，换句话来说，局部变量$var2的改变，不会再影响到全局变量$var2，而会影响到重新指向的全局变量$var1。 </p>
+<p>我们再来看一个例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$var1 = 1;</div><div class="line">function test()&#123;</div><div class="line">unset($GLOBALS[&apos;var1&apos;]);</div><div class="line">&#125;</div><div class="line">test();</div><div class="line">echo $var1; //因为$var1被删除了，所以什么东西都没有打印。</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$var1 = 1;</div><div class="line">function test()&#123;</div><div class="line">global $var1;</div><div class="line">unset($var1);</div><div class="line">&#125;</div><div class="line">test();</div><div class="line">echo $var1; // 输出1。</div></pre></td></tr></table></figure>
+<p>证明删除的只是别名，$GLOBALS[‘var’]的引用，起本身的值没有受到任何的改变。<br>也就是说 global $var 其实就是<code>$var = &amp;$GLOBALS[&#39;var&#39;]</code>。</p>
+<p>如果写成如下，则会出错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$GLOBALS[&quot;var&quot;] = 1;</div><div class="line">$var = &amp;$GLOBALS[&quot;var&quot;];</div><div class="line">unset($GLOBALS[&apos;var&apos;]);</div><div class="line">echo $var; //脚本没法执行</div></pre></td></tr></table></figure></p>
+<p>unset只是把只是断开了变量名和变量内容之间的绑定。这并不意味着变量内容被销毁了。<br>如果在一个函数内部给一个声明为 global 的变量赋于一个引用，该引用只在函数内部可见。可以通过使用 $GLOBALS 数组避免这一点。</p>
+<p>我们都知道php中的函数所产生的变量都是函数的私有变量，那么global关键字产生的变量也肯定逃不出这个规则，global在函数产生一个指向函数外部变量的别名变量，而不是真正的函数外部变量，一但改变了别名变量的指向地址，就会发生一些意料不到情况，$GLOBALS[]确确实实调用是外部的变量，函数内外会始终保持一致。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$a = 1;</div><div class="line">$b = 2;</div><div class="line">function Sum() &#123;</div><div class="line">global $a, $b;</div><div class="line">$b = $a + $b;</div><div class="line">&#125;</div><div class="line">Sum();</div><div class="line">echo $b; // 输出3</div><div class="line">?&gt;</div></pre></td></tr></table></figure></p>
+<p>怎么不是2呢，在函数外部不是不影响吗，请注意$b在函数中并没有通过引用修改，而是修改的$b指向物理内存的值。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;根据官方的解释：&lt;br&gt;$GLOBALS[‘var’] 是外部的全局变量$var本身&lt;br&gt;global $var 是外部$var的同名引用&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="php" scheme="http://www.ninely.top/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://www.ninely.top/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP大小写敏感规则</title>

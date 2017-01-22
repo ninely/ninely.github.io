@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.ninely.top/post/php/2017-01-22-PHP-global.html</loc>
+    <lastmod>2017-01-22T03:52:35.032Z</lastmod>
+    <data>
+        <display>
+        <title>PHP中global与$GLOBALS['']分析</title>
+        <pubTime>2017-01-22T03:32:35.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://www.ninely.top/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ninely.top/post/php/2017-01-02-PHP-case-sensitive.html</loc>
     <lastmod>2017-01-04T03:58:17.519Z</lastmod>
     <data>

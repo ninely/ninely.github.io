@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[PHP中global与$GLOBALS['']分析]]></title>
+      <url>%2Fpost%2Fphp%2F2017-01-22-PHP-global.html</url>
+      <content type="text"><![CDATA[根据官方的解释：$GLOBALS[‘var’] 是外部的全局变量$var本身global $var 是外部$var的同名引用 举例说明一下：123456789&lt;?php$var1 = 1;$var2 = 2;function test() &#123;$GLOBALS[&apos;var2&apos;] = &amp;$GLOBALS[&apos;var1&apos;];&#125;test();echo $var2; // 输出 1 1234567891011121314&lt;?php$var1 = 1;$var2 = 2;function test()&#123;global $var1, $var2;$var2 = &amp;$var1;echo $var2;$var2 = &apos;snsgou.com&apos;;&#125;test(); // 输出 1echo $var2; // 输出 2echo $var1; // 输出 snsgou.com test()函数中的$var1，$va2都是局部变量，只不过是加了global关键字后，分别引用指向全局变量$var1，$var2了，当 $var2 = &amp;$var1; 时，局部变量$var2不再指向全局变量$var2，而重新指向全局变量$var1，换句话来说，局部变量$var2的改变，不会再影响到全局变量$var2，而会影响到重新指向的全局变量$var1。 我们再来看一个例子:1234567&lt;?php$var1 = 1;function test()&#123;unset($GLOBALS[&apos;var1&apos;]);&#125;test();echo $var1; //因为$var1被删除了，所以什么东西都没有打印。 12345678&lt;?php$var1 = 1;function test()&#123;global $var1;unset($var1);&#125;test();echo $var1; // 输出1。 证明删除的只是别名，$GLOBALS[‘var’]的引用，起本身的值没有受到任何的改变。也就是说 global $var 其实就是$var = &amp;$GLOBALS[&#39;var&#39;]。 如果写成如下，则会出错：12345&lt;?php$GLOBALS[&quot;var&quot;] = 1;$var = &amp;$GLOBALS[&quot;var&quot;];unset($GLOBALS[&apos;var&apos;]);echo $var; //脚本没法执行 unset只是把只是断开了变量名和变量内容之间的绑定。这并不意味着变量内容被销毁了。如果在一个函数内部给一个声明为 global 的变量赋于一个引用，该引用只在函数内部可见。可以通过使用 $GLOBALS 数组避免这一点。 我们都知道php中的函数所产生的变量都是函数的私有变量，那么global关键字产生的变量也肯定逃不出这个规则，global在函数产生一个指向函数外部变量的别名变量，而不是真正的函数外部变量，一但改变了别名变量的指向地址，就会发生一些意料不到情况，$GLOBALS[]确确实实调用是外部的变量，函数内外会始终保持一致。12345678910&lt;?php$a = 1;$b = 2;function Sum() &#123;global $a, $b;$b = $a + $b;&#125;Sum();echo $b; // 输出3?&gt; 怎么不是2呢，在函数外部不是不影响吗，请注意$b在函数中并没有通过引用修改，而是修改的$b指向物理内存的值。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[PHP大小写敏感规则]]></title>
       <url>%2Fpost%2Fphp%2F2017-01-02-PHP-case-sensitive.html</url>
       <content type="text"><![CDATA[测试版本 PHP：5.6.24 一、大小写敏感 变量名区分大小写 所有变量均区分大小写，包括$_GET，$_POST，$_REQUEST，$_COOKIE，$_SESSION，$GLOBALS，$_SERVER，$_FILES，$_ENV 等； 常量名默认区分大小写 php.ini配置项指令区分大小写 数组索引（键名）区分大小写 二、大小写不敏感 函数名、方法名、类名(包括类中方法) 不区分大小写 魔术常量不区分大小写，推荐大写 NULL、TRUE、FALSE不区分大小写 类型强制转换，不区分大小写 (int)，(integer) – 转换成整型 (bool)，(boolean) – 转换成布尔型 (float)，(double)，(real) – 转换成浮点型 (string) – 转换成字符串 (array) – 转换成数组 (object) – 转换成对象 命名空间不区分大小写]]></content>
